@@ -1,0 +1,12 @@
+{
+  "name": "cause-toujours-site",
+  "version": "1.0.0",
+  "description": "Site web de Cause Toujours ! — média papier bi-mensuel indépendant de Montpellier",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,180 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "homepage"
+    label: "Page d'accueil"
+    delete: false
+    files:
+      - file: "_data/homepage.json"
+        name: "homepage"
+        label: "Contenu du site"
+        format: "json"
+        fields:
+          # --- META ---
+          - name: "meta"
+            label: "Méta (titre & description navigateur)"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Titre onglet", widget: "string" }
+              - { name: "description", label: "Description SEO", widget: "text" }
+
+          # --- HERO ---
+          - name: "hero"
+            label: "Hero (en-tête)"
+            widget: "object"
+            fields:
+              - { name: "sticker", label: "Sticker", widget: "string" }
+              - { name: "title", label: "Titre", widget: "string" }
+              - { name: "title_bang", label: "Point d'exclamation", widget: "string" }
+              - { name: "subtitle", label: "Sous-titre", widget: "string" }
+              - { name: "baseline", label: "Baseline", widget: "text" }
+              - { name: "cta_primary_text", label: "Bouton principal (texte)", widget: "string" }
+              - { name: "cta_primary_link", label: "Bouton principal (lien)", widget: "string" }
+              - { name: "cta_secondary_text", label: "Bouton secondaire (texte)", widget: "string" }
+              - { name: "cta_secondary_link", label: "Bouton secondaire (lien)", widget: "string" }
+              - { name: "scroll_text", label: "Texte d'invitation au défilement", widget: "string" }
+              - name: "badge_lines"
+                label: "Badge (lignes)"
+                widget: "list"
+                minimize_collapsed: true
+              - name: "kraft_bar"
+                label: "Bandeau kraft (textes alternés)"
+                widget: "list"
+                minimize_collapsed: true
+              - { name: "cover_image", label: "Image de couverture (fichier)", widget: "string" }
+              - { name: "cover_alt", label: "Texte alternatif image", widget: "string" }
+
+          # --- MANIFESTE ---
+          - name: "manifeste"
+            label: "Manifeste"
+            widget: "object"
+            fields:
+              - { name: "section_num", label: "Numéro de section", widget: "string" }
+              - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
+              - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
+              - { name: "section_tag", label: "Étiquette", widget: "string" }
+              - { name: "dropcap", label: "Paragraphe d'intro (lettrine)", widget: "markdown" }
+              - name: "paragraphs"
+                label: "Paragraphes du manifeste"
+                widget: "list"
+                minimize_collapsed: true
+                field: { name: "text", label: "Paragraphe", widget: "markdown" }
+              - { name: "aside_label", label: "Étiquette aside", widget: "string" }
+              - { name: "aside_text", label: "Texte aside", widget: "text" }
+              - { name: "aside_link_text", label: "Lien aside (texte)", widget: "string" }
+              - { name: "aside_link_url", label: "Lien aside (URL)", widget: "string" }
+              - { name: "pull_quote", label: "Citation forte", widget: "markdown" }
+
+          # --- SOUTENIR ---
+          - name: "soutenir"
+            label: "Soutenir (abonnements & dons)"
+            widget: "object"
+            fields:
+              - { name: "section_num", label: "Numéro de section", widget: "string" }
+              - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
+              - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
+              - { name: "section_tag", label: "Étiquette", widget: "string" }
+              - name: "formules"
+                label: "Formules"
+                widget: "list"
+                minimize_collapsed: true
+                fields:
+                  - { name: "tape", label: "Étiquette", widget: "string" }
+                  - { name: "price", label: "Prix", widget: "string" }
+                  - { name: "price_unit", label: "Unité", widget: "string" }
+                  - { name: "desc", label: "Description", widget: "text" }
+                  - { name: "button_text", label: "Bouton (texte)", widget: "string" }
+                  - { name: "button_link", label: "Bouton (lien)", widget: "string" }
+                  - { name: "highlight", label: "Mettre en avant", widget: "boolean", default: false }
+                  - { name: "flag", label: "Drapeau (ex: MEILLEUR CHOIX)", widget: "string", default: "" }
+              - { name: "transparency_title", label: "Titre transparence", widget: "string" }
+              - name: "transparency_bars"
+                label: "Barres de transparence"
+                widget: "list"
+                minimize_collapsed: true
+                fields:
+                  - { name: "pct", label: "Pourcentage", widget: "string" }
+                  - { name: "label", label: "Libellé", widget: "string" }
+              - { name: "transparency_note", label: "Note de transparence", widget: "markdown" }
+              - { name: "adresse_label", label: "Étiquette adresse", widget: "string" }
+              - { name: "adresse_text", label: "Texte adresse", widget: "text" }
+
+          # --- DERNIER NUMÉRO ---
+          - name: "numero"
+            label: "Dernier numéro"
+            widget: "object"
+            fields:
+              - { name: "section_num", label: "Numéro de section", widget: "string" }
+              - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
+              - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
+              - { name: "section_tag", label: "Étiquette", widget: "string" }
+              - { name: "preview_tape", label: "Étiquette aperçu", widget: "string" }
+              - { name: "preview_title", label: "Titre aperçu", widget: "string" }
+              - { name: "preview_title_bang", label: "Bang aperçu", widget: "string" }
+              - { name: "preview_headline", label: "Manchette aperçu", widget: "string" }
+              - { name: "preview_sub", label: "Sous-titre aperçu", widget: "string" }
+              - { name: "poster_tag", label: "Étiquette poster", widget: "string" }
+              - { name: "jeux_tape", label: "Étiquette jeux", widget: "string" }
+              - { name: "jeux_intro", label: "Intro jeux", widget: "text" }
+              - { name: "jeux_content", label: "Réponses des jeux", widget: "markdown" }
+              - { name: "engagement_title", label: "Titre engagement", widget: "string" }
+              - { name: "engagement_text", label: "Texte engagement", widget: "markdown" }
+              - { name: "engagement_button_text", label: "Bouton engagement (texte)", widget: "string" }
+              - { name: "engagement_button_link", label: "Bouton engagement (lien)", widget: "string" }
+
+          # --- OÙ NOUS RETROUVER ---
+          - name: "trouver"
+            label: "Points de vente"
+            widget: "object"
+            fields:
+              - { name: "section_num", label: "Numéro de section", widget: "string" }
+              - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
+              - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
+              - { name: "section_tag", label: "Étiquette", widget: "string" }
+              - name: "locations"
+                label: "Points de vente"
+                widget: "list"
+                minimize_collapsed: true
+                fields:
+                  - { name: "num", label: "Numéro", widget: "string" }
+                  - { name: "name", label: "Nom", widget: "string" }
+                  - { name: "address", label: "Adresse", widget: "string" }
+              - { name: "map_text", label: "Texte carte", widget: "text" }
+
+          # --- QUI SOMMES-NOUS ---
+          - name: "qui"
+            label: "Qui sommes-nous"
+            widget: "object"
+            fields:
+              - { name: "section_num", label: "Numéro de section", widget: "string" }
+              - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
+              - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
+              - { name: "section_tag", label: "Étiquette", widget: "string" }
+              - name: "paragraphs"
+                label: "Paragraphes"
+                widget: "list"
+                minimize_collapsed: true
+                field: { name: "text", label: "Paragraphe", widget: "markdown" }
+              - { name: "social_title", label: "Titre réseaux sociaux", widget: "string" }
+              - { name: "social_text", label: "Texte réseaux sociaux", widget: "markdown" }
+              - { name: "social_link_text", label: "Lien réseau (texte)", widget: "string" }
+              - { name: "social_link_url", label: "Lien réseau (URL)", widget: "string" }
+              - { name: "cc_label", label: "Étiquette Cause Commune", widget: "string" }
+              - { name: "cc_name", label: "Nom Cause Commune", widget: "string" }
+              - { name: "cc_detail", label: "Détail Cause Commune", widget: "string" }
+
+          # --- FOOTER ---
+          - name: "footer"
+            label: "Pied de page"
+            widget: "object"
+            fields:
+              - { name: "logo", label: "Logo (texte)", widget: "string" }
+              - { name: "logo_bang", label: "Bang", widget: "string" }
+              - { name: "text", label: "Texte pied de page", widget: "string" }
+              - name: "bar_items"
+                label: "Éléments barre pied de page"
+                widget: "list"
+                minimize_collapsed: true

@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "Cause Toujours ! — Média local indépendant · Montpellier",
+    "description": "Média papier bi-mensuel, indépendant, bénévole et engagé. Montpellier."
+  },
+  "hero": {
+    "sticker": "NOUVEAU MÉDIA",
+    "title": "CAUSE TOUJOURS",
+    "title_bang": "!",
+    "subtitle": "L'info de Montpellier qui s'affiche en grand",
+    "baseline": "Papier. Bi-mensuel. Indépendant des milliardaires et des pouvoirs locaux. 100% bénévole. Montpellier.",
+    "cta_primary_text": "SOUTENIR / S'ABONNER →",
+    "cta_primary_link": "#soutenir",
+    "cta_secondary_text": "LIRE LE N°001",
+    "cta_secondary_link": "#numero",
+    "scroll_text": "↓ défile, on a écrit des trucs",
+    "badge_lines": ["PREMIER", "NUMÉRO", "SEPT 2026"],
+    "kraft_bar": ["N°001 — SEPTEMBRE 2026", "TIRAGE LIMITÉ", "100% BÉNÉVOLE", "SANS PUB", "SANS MILLIARDAIRE"],
+    "cover_image": "journal-cover.png",
+    "cover_alt": "Une du N°001 — Cause Toujours !"
+  },
+  "manifeste": {
+    "section_num": "01",
+    "section_title_1": "POURQUOI",
+    "section_title_2": "UN MÉDIA\u00a0?",
+    "section_tag": "MINI-MANIFESTE",
+    "dropcap": "La presse locale est morte. <em>Midi Libre</em> appartient à des milliardaires, la com' institutionnelle noie l'information sous les communiqués. Il manque une voix libre, indépendante, qui ne rend de comptes qu'à ses lecteurs.",
+    "paragraphs": [
+      "Nous avons choisi le <strong>papier bi-mensuel</strong> contre l'infobésité et le flux continu d'écrans. Un objet qu'on garde, qu'on relit, qu'on prête. Pas une notification qu'on oublie.",
+      "<strong>100 % bénévole et engagé.</strong> Personne ne prend de salaire. Chaque euro finance le prochain numéro. Pas d'actionnaires, pas de subventions conditionnelles, pas de pub déguisée.",
+      "<em>Cause Toujours !</em> est un média ancré à Montpellier — culture, luttes, ville, gens — sans filtre et sans peur."
+    ],
+    "aside_label": "MANIFESTE LONG →",
+    "aside_text": "La version complète, avec les références et les sources.",
+    "aside_link_text": "Ouvrir le document →",
+    "aside_link_url": "https://docs.google.com/document/d/1g8uZ63e-0J505eGIR2bSKz2MnbbF0Yi_x0nSkj6nSz4/edit",
+    "pull_quote": "« Un objet qu'on garde,<br>qu'on relit, qu'on prête.<br>Pas une notification<br>qu'on oublie. »"
+  },
+  "soutenir": {
+    "section_num": "02",
+    "section_title_1": "SOUTENIR",
+    "section_title_2": "CAUSE TOUJOURS\u00a0!",
+    "section_tag": "ABONNEMENTS & DONS",
+    "formules": [
+      {
+        "tape": "LECTEUR",
+        "price": "8€",
+        "price_unit": "/numéro",
+        "desc": "Le prix brut d'un numéro. Papier, encre, impression. Rien de plus.",
+        "button_text": "DONNER 8€ →",
+        "button_link": "#",
+        "highlight": false,
+        "flag": ""
+      },
+      {
+        "tape": "★ ABONNÉ",
+        "price": "40€",
+        "price_unit": "/an · 6 n°",
+        "desc": "Reçois chaque numéro chez toi. Adresse postale demandée au paiement.",
+        "button_text": "S'ABONNER →",
+        "button_link": "#",
+        "highlight": true,
+        "flag": "MEILLEUR CHOIX"
+      },
+      {
+        "tape": "SOUTIEN MENSUEL",
+        "price": "Libre",
+        "price_unit": "/mois",
+        "desc": "Prélèvement mensuel. La base solide pour construire sur le long terme.",
+        "button_text": "DON MENSUEL →",
+        "button_link": "#",
+        "highlight": false,
+        "flag": ""
+      }
+    ],
+    "transparency_title": "OÙ VA VOTRE ARGENT\u00a0?",
+    "transparency_bars": [
+      { "pct": "55%", "label": "Impression papier" },
+      { "pct": "20%", "label": "Artistes locaux (poster A2)" },
+      { "pct": "15%", "label": "Distribution & logistique" },
+      { "pct": "10%", "label": "Fonctionnement" }
+    ],
+    "transparency_note": "<strong>0 € dans la poche d'actionnaires.</strong> Tout est réinvesti dans le prochain numéro.",
+    "adresse_label": "📬 ABONNÉS PAPIER",
+    "adresse_text": "L'adresse postale est demandée lors du paiement pour l'envoi des numéros à domicile."
+  },
+  "numero": {
+    "section_num": "03",
+    "section_title_1": "LE DERNIER",
+    "section_title_2": "NUMÉRO",
+    "section_tag": "EXTENSION DU PAPIER",
+    "preview_tape": "UNE DU N°001",
+    "preview_title": "CAUSE TOUJOURS",
+    "preview_title_bang": "!",
+    "preview_headline": "MONTPELLIER",
+    "preview_sub": "ce qui se passe vraiment",
+    "poster_tag": "↑ POSTER A2 DÉPLIABLE",
+    "jeux_tape": "RÉPONSES DES JEUX",
+    "jeux_intro": "Les solutions des mots croisés et fléchés du dernier numéro.",
+    "jeux_content": "<em>Les réponses seront publiées ici à la sortie du prochain numéro.</em>",
+    "engagement_title": "PRENDRE LA PLUME",
+    "engagement_text": "Vous écrivez, dessinez, photographiez\u00a0? Contribuez au prochain numéro.",
+    "engagement_button_text": "ÉCRIRE À LA RÉDAC →",
+    "engagement_button_link": "mailto:contact@causetoujours.fr"
+  },
+  "trouver": {
+    "section_num": "04",
+    "section_title_1": "OÙ NOUS",
+    "section_title_2": "RETROUVER\u00a0?",
+    "section_tag": "POINTS DE VENTE",
+    "locations": [
+      { "num": "01", "name": "Le QG", "address": "12 rue de la Loge, Montpellier" },
+      { "num": "02", "name": "Biocoop Garrigues", "address": "25 av. des Marris, Montpellier" },
+      { "num": "03", "name": "Théâtre de la Plume", "address": "5 rue de l'Aiguillerie, Montpellier" },
+      { "num": "04", "name": "Librairie Sauramps", "address": "Le Triangle, Montpellier" }
+    ],
+    "map_text": "Carte des points de vente<br>(à intégrer)"
+  },
+  "qui": {
+    "section_num": "05",
+    "section_title_1": "QUI",
+    "section_title_2": "SOMMES-NOUS\u00a0?",
+    "section_tag": "L'ÉQUIPE",
+    "paragraphs": [
+      "<em>Cause Toujours !</em> est un collectif de bénévoles montpelliérains qui croit qu'une ville mérite un média qui lui ressemble : libre, impertinent, culturel, ancré.",
+      "Pas un relais de com'. Pas un journal de pub. Nous écrivons, imprimons, distribuons nous-mêmes. <strong>Personne ne nous dit quoi dire.</strong>"
+    ],
+    "social_title": "SUIVEZ-NOUS",
+    "social_text": "Sur Instagram, via le compte de notre grande sœur\u00a0:",
+    "social_link_text": "@CAUSECOMMUNE →",
+    "social_link_url": "https://www.instagram.com/causecommune93.1/",
+    "cc_label": "UN PROJET DE LA FAMILLE",
+    "cc_name": "CAUSE COMMUNE",
+    "cc_detail": "93.1 FM · Radio libre · Paris"
+  },
+  "footer": {
+    "logo": "CAUSE TOUJOURS",
+    "logo_bang": "!",
+    "text": "Média local indépendant · Montpellier · 100% bénévole · Papier bi-mensuel",
+    "bar_items": ["© 2026", "Fait avec de l'encre et du logiciel libre", "Sans pub, sans milliardaire, sans pardon"]
+  }
+}

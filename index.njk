@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ homepage.meta.title }}</title>
+  <meta name="description" content="{{ homepage.meta.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- === GRAIN === -->
+  <div class="grain"></div>
+
+  <!-- === HEADER === -->
+  <header class="hd">
+    <div class="hd-inner">
+      <a href="#" class="logo">
+        <span class="logo-ct">CAUSE TOUJOURS<span class="bang">!</span></span>
+        <span class="logo-sub">MÉDIA LOCAL · MONTPELLIER · BIMENSUEL</span>
+      </a>
+      <nav class="hd-nav">
+        <a href="#manifeste">Manifeste</a>
+        <a href="#soutenir">Soutenir</a>
+        <a href="#numero">Numéro</a>
+        <a href="#trouver">Trouver</a>
+      </nav>
+      <a href="#soutenir" class="btn-hd">S'ABONNER →</a>
+    </div>
+  </header>
+
+  <!-- === HERO === -->
+  <section class="hero" id="hero">
+    <div class="kraft-bar">
+      {% for item in homepage.hero.kraft_bar %}
+      <span>{{ item }}</span>
+      {% if not loop.last %}<span class="kraft-dot">●</span>{% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-sticker">{{ homepage.hero.sticker }}</div>
+        <h1 class="hero-title-big">{{ homepage.hero.title }}<span class="bang">{{ homepage.hero.title_bang }}</span></h1>
+        <p class="hero-subtitle">{{ homepage.hero.subtitle }}</p>
+        <p class="hero-baseline">{{ homepage.hero.baseline }}</p>
+        <div class="hero-cta">
+          <a href="{{ homepage.hero.cta_primary_link }}" class="btn-primary">{{ homepage.hero.cta_primary_text }}</a>
+          <a href="{{ homepage.hero.cta_secondary_link }}" class="btn-ghost">{{ homepage.hero.cta_secondary_text }}</a>
+        </div>
+        <div class="hero-scoll">{{ homepage.hero.scroll_text }}</div>
+      </div>
+
+      <div class="hero-right">
+        <div class="journal-cover">
+          <img src="{{ homepage.hero.cover_image }}" alt="{{ homepage.hero.cover_alt }}">
+        </div>
+        <div class="hero-badge">
+          {% for line in homepage.hero.badge_lines %}
+          <span>{{ line }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === MANIFESTE === -->
+  <section class="section" id="manifeste">
+    <div class="sec-head">
+      <span class="sec-num">{{ homepage.manifeste.section_num }}</span>
+      <h2 class="sec-title">{{ homepage.manifeste.section_title_1 }}<br>{{ homepage.manifeste.section_title_2 | safe }}</h2>
+      <span class="sec-tag">{{ homepage.manifeste.section_tag }}</span>
+    </div>
+
+    <div class="manifeste-layout">
+      <div class="manifeste-main">
+        <p class="dropcap">{{ homepage.manifeste.dropcap | safe }}</p>
+        {% for para in homepage.manifeste.paragraphs %}
+        <p>{{ para | safe }}</p>
+        {% endfor %}
+      </div>
+
+      <aside class="manifeste-aside">
+        <div class="tape tape-accent">
+          <span>{{ homepage.manifeste.aside_label }}</span>
+        </div>
+        <div class="aside-body">
+          <p>{{ homepage.manifeste.aside_text }}</p>
+          <a href="{{ homepage.manifeste.aside_link_url }}" target="_blank" class="link-block">{{ homepage.manifeste.aside_link_text }}</a>
+        </div>
+        <div class="manifeste-pull">
+          <p><strong>{{ homepage.manifeste.pull_quote | safe }}</strong></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- === SOUTENIR === -->
+  <section class="section section-alt" id="soutenir">
+    <div class="sec-head">
+      <span class="sec-num sec-num-light">{{ homepage.soutenir.section_num }}</span>
+      <h2 class="sec-title">{{ homepage.soutenir.section_title_1 }}<br>{{ homepage.soutenir.section_title_2 | safe }}</h2>
+      <span class="sec-tag sec-tag-light">{{ homepage.soutenir.section_tag }}</span>
+    </div>
+
+    <div class="formules">
+      {% for formule in homepage.soutenir.formules %}
+      <div class="formule{% if formule.highlight %} formule-pick{% endif %}">
+        <div class="formule-tape{% if formule.highlight %} formule-tape-accent{% endif %}">{{ formule.tape }}</div>
+        <div class="formule-price">{{ formule.price }}<span>{{ formule.price_unit }}</span></div>
+        <p class="formule-desc">{{ formule.desc }}</p>
+        <a href="{{ formule.button_link }}" class="btn-formule">{{ formule.button_text }}</a>
+        {% if formule.flag %}<div class="formule-flag">{{ formule.flag }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="transp">
+      <h3 class="transp-title">{{ homepage.soutenir.transparency_title | safe }}</h3>
+      <div class="transp-bars">
+        {% for bar in homepage.soutenir.transparency_bars %}
+        <div class="transp-row">
+          <span class="transp-pct">{{ bar.pct }}</span>
+          <div class="transp-bar transp-bar-{{ loop.index }}"><span>{{ bar.label }}</span></div>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="transp-note">{{ homepage.soutenir.transparency_note | safe }}</p>
+    </div>
+
+    <div class="adresse-note">
+      <span class="aside-label">{{ homepage.soutenir.adresse_label }}</span>
+      <p>{{ homepage.soutenir.adresse_text }}</p>
+    </div>
+  </section>
+
+  <!-- === DERNIER NUMÉRO === -->
+  <section class="section" id="numero">
+    <div class="sec-head">
+      <span class="sec-num">{{ homepage.numero.section_num }}</span>
+      <h2 class="sec-title">{{ homepage.numero.section_title_1 }}<br>{{ homepage.numero.section_title_2 }}</h2>
+      <span class="sec-tag">{{ homepage.numero.section_tag }}</span>
+    </div>
+
+    <div class="numero-grid">
+      <div class="numero-left">
+        <div class="preview-card">
+          <div class="preview-tape">{{ homepage.numero.preview_tape }}</div>
+          <div class="preview-mock">
+            <div class="pm-bar"></div>
+            <div class="pm-title">{{ homepage.numero.preview_title }}<span class="bang">{{ homepage.numero.preview_title_bang }}</span></div>
+            <div class="pm-headline">{{ homepage.numero.preview_headline }}</div>
+            <div class="pm-sub">{{ homepage.numero.preview_sub }}</div>
+            <div class="pm-cols">
+              <div class="pm-col"></div>
+              <div class="pm-col"></div>
+              <div class="pm-col"></div>
+            </div>
+          </div>
+          <div class="preview-poster-tag">{{ homepage.numero.poster_tag }}</div>
+        </div>
+      </div>
+
+      <div class="numero-right">
+        <div class="jeux-block">
+          <div class="jeux-tape">{{ homepage.numero.jeux_tape }}</div>
+          <p class="jeux-intro">{{ homepage.numero.jeux_intro }}</p>
+          <div class="jeux-content">
+            <p>{{ homepage.numero.jeux_content | safe }}</p>
+          </div>
+        </div>
+
+        <div class="engagement-block">
+          <h3 class="block-title">{{ homepage.numero.engagement_title }}</h3>
+          <p>{{ homepage.numero.engagement_text | safe }}</p>
+          <a href="{{ homepage.numero.engagement_button_link }}" class="btn-outline">{{ homepage.numero.engagement_button_text }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === OÙ NOUS RETROUVER === -->
+  <section class="section section-alt" id="trouver">
+    <div class="sec-head">
+      <span class="sec-num">{{ homepage.trouver.section_num }}</span>
+      <h2 class="sec-title">{{ homepage.trouver.section_title_1 }}<br>{{ homepage.trouver.section_title_2 | safe }}</h2>
+      <span class="sec-tag">{{ homepage.trouver.section_tag }}</span>
+    </div>
+
+    <div class="trouver-grid">
+      <div class="trouver-list">
+        {% for loc in homepage.trouver.locations %}
+        <div class="trouver-item">
+          <span class="trouver-num">{{ loc.num }}</span>
+          <div>
+            <strong>{{ loc.name }}</strong>
+            <p>{{ loc.address }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="trouver-map">
+        <div class="map-mock">
+          <span class="map-pin">📍</span>
+          <p>{{ homepage.trouver.map_text | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === QUI SOMMES-NOUS === -->
+  <section class="section section-alt" id="qui">
+    <div class="sec-head">
+      <span class="sec-num sec-num-light">{{ homepage.qui.section_num }}</span>
+      <h2 class="sec-title">{{ homepage.qui.section_title_1 }}<br>{{ homepage.qui.section_title_2 | safe }}</h2>
+      <span class="sec-tag sec-tag-light">{{ homepage.qui.section_tag }}</span>
+    </div>
+
+    <div class="qui-grid">
+      <div class="qui-text">
+        {% for para in homepage.qui.paragraphs %}
+        <p>{{ para | safe }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="qui-right">
+        <div class="qui-card">
+          <h3 class="block-title-light">{{ homepage.qui.social_title }}</h3>
+          <p>{{ homepage.qui.social_text | safe }}</p>
+          <a href="{{ homepage.qui.social_link_url }}" target="_blank" class="btn-outline">{{ homepage.qui.social_link_text }}</a>
+        </div>
+
+        <div class="cc-link">
+          <span class="cc-label">{{ homepage.qui.cc_label }}</span>
+          <strong>{{ homepage.qui.cc_name }}</strong>
+          <span class="cc-detail">{{ homepage.qui.cc_detail }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer class="ft">
+    <div class="ft-inner">
+      <div class="ft-logo">{{ homepage.footer.logo }}<span class="bang">{{ homepage.footer.logo_bang }}</span></div>
+      <p class="ft-text">{{ homepage.footer.text }}</p>
+      <div class="ft-bar">
+        {% for item in homepage.footer.bar_items %}
+        <span>{{ item }}</span>
+        {% if not loop.last %}<span class="ft-dot">●</span>{% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
