@@ -107,10 +107,10 @@
     "section_title_2": "RETROUVER\u00a0?",
     "section_tag": "POINTS DE VENTE",
     "locations": [
-      { "num": "01", "name": "Le QG", "address": "12 rue de la Loge, Montpellier", "lat": 43.6096, "lng": 3.8778 },
-      { "num": "02", "name": "Biocoop Garrigues", "address": "25 av. des Marris, Montpellier", "lat": 43.6085, "lng": 3.8729 },
-      { "num": "03", "name": "Théâtre de la Plume", "address": "5 rue de l'Aiguillerie, Montpellier", "lat": 43.6104, "lng": 3.8775 },
-      { "num": "04", "name": "Librairie Sauramps", "address": "Le Triangle, Montpellier", "lat": 43.6039, "lng": 3.9199 }
+      { "num": "01", "name": "Le QG", "address": "12 rue de la Loge, Montpellier", "lat": 43.6096, "lng": 3.8778, "color": "#C8302A" },
+      { "num": "02", "name": "Biocoop Garrigues", "address": "25 av. des Marris, Montpellier", "lat": 43.6085, "lng": 3.8729, "color": "#7BB89C" },
+      { "num": "03", "name": "Théâtre de la Plume", "address": "5 rue de l'Aiguillerie, Montpellier", "lat": 43.6104, "lng": 3.8775, "color": "#D4A537" },
+      { "num": "04", "name": "Le Grain des Mots", "address": "2 cours Gambetta, Montpellier", "lat": 43.6055, "lng": 3.8745, "color": "#5B8BA0" }
     ],
     "map_text": "Carte des points de vente<br>(à intégrer)"
   },

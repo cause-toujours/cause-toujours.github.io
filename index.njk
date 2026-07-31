@@ -187,7 +187,7 @@
       <div class="trouver-list">
         {% for loc in homepage.trouver.locations %}
         <div class="trouver-item">
-          <span class="trouver-num">{{ loc.num }}</span>
+          <span class="trouver-num" style="background:{{ loc.color }}">{{ loc.num }}</span>
           <div>
             <strong>{{ loc.name }}</strong>
             <p>{{ loc.address }}</p>
@@ -256,7 +256,14 @@
       attribution: '&copy; OpenStreetMap'
     }).addTo(map);
     {% for loc in homepage.trouver.locations %}
-    L.marker([{{ loc.lat }}, {{ loc.lng }}]).addTo(map).bindPopup('<strong>{{ loc.name }}</strong><br>{{ loc.address }}');
+    L.marker([{{ loc.lat }}, {{ loc.lng }}], {
+      icon: L.divIcon({
+        className: 'ct-marker',
+        html: '<div style="background:{{ loc.color }}" class="ct-marker-inner">{{ loc.num }}</div>',
+        iconSize: [36, 36],
+        iconAnchor: [18, 18]
+      })
+    }).addTo(map).bindPopup('<strong>{{ loc.name }}</strong><br>{{ loc.address }}');
     {% endfor %}
     setTimeout(() => map.invalidateSize(), 100);
   </script>
