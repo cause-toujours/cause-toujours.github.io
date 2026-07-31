@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("versions");
   eleventyConfig.addPassthroughCopy("journal-cover.png");
+  eleventyConfig.addPassthroughCopy("journal-page3.png");
 
   return {
     templateFormats: ["njk", "md"],

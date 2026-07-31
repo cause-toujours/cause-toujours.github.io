@@ -131,10 +131,8 @@ collections:
               - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
               - { name: "section_tag", label: "Étiquette", widget: "string" }
               - { name: "preview_tape", label: "Étiquette aperçu", hint: "Texte sur l'aperçu de la Une", widget: "string" }
-              - { name: "preview_title", label: "Titre aperçu", widget: "string" }
-              - { name: "preview_title_bang", label: "Bang aperçu", widget: "string" }
-              - { name: "preview_headline", label: "Manchette aperçu", widget: "string" }
-              - { name: "preview_sub", label: "Sous-titre aperçu", widget: "string" }
+              - { name: "preview_image", label: "Image aperçu", hint: "Nom du fichier image (ex: journal-page3.png)", widget: "string" }
+              - { name: "preview_image_alt", label: "Description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string" }
               - { name: "poster_tag", label: "Étiquette poster", widget: "string" }
               - { name: "jeux_tape", label: "Étiquette jeux", widget: "string" }
               - { name: "jeux_intro", label: "Introduction jeux", hint: "Texte au-dessus des réponses", widget: "text" }
