@@ -1,11 +1,17 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
 backend:
-  name: git-gateway
+  name: github
+  repo: cause-toujours/cause-toujours.github.io
   branch: main
+
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
+
 collections:
   - name: "homepage"
     label: "Page d'accueil"
+    label_singular: "Contenu du site"
     delete: false
     files:
       - file: "_data/homepage.json"
@@ -15,120 +21,134 @@ collections:
         fields:
           # --- META ---
           - name: "meta"
-            label: "Méta (titre & description navigateur)"
+            label: "informations navigateur"
             widget: "object"
+            summary: "{{fields.title}}"
             fields:
-              - { name: "title", label: "Titre onglet", widget: "string" }
-              - { name: "description", label: "Description SEO", widget: "text" }
+              - { name: "title", label: "Titre de l'onglet", hint: "Texte affiché dans l'onglet du navigateur et dans les résultats Google", widget: "string" }
+              - { name: "description", label: "Description (référencement)", hint: "Texte court affiché par Google sous le titre du site", widget: "text" }
 
           # --- HERO ---
           - name: "hero"
-            label: "Hero (en-tête)"
+            label: "1. En-tête (haut de page)"
             widget: "object"
+            summary: "{{fields.title}}"
             fields:
-              - { name: "sticker", label: "Sticker", widget: "string" }
-              - { name: "title", label: "Titre", widget: "string" }
-              - { name: "title_bang", label: "Point d'exclamation", widget: "string" }
-              - { name: "subtitle", label: "Sous-titre", widget: "string" }
-              - { name: "baseline", label: "Baseline", widget: "text" }
-              - { name: "cta_primary_text", label: "Bouton principal (texte)", widget: "string" }
-              - { name: "cta_primary_link", label: "Bouton principal (lien)", widget: "string" }
-              - { name: "cta_secondary_text", label: "Bouton secondaire (texte)", widget: "string" }
-              - { name: "cta_secondary_link", label: "Bouton secondaire (lien)", widget: "string" }
-              - { name: "scroll_text", label: "Texte d'invitation au défilement", widget: "string" }
+              - { name: "sticker", label: "Petite étiquette", hint: "Texte du sticker au-dessus du titre (ex: NOUVEAU MÉDIA)", widget: "string" }
+              - { name: "title", label: "Titre principal", hint: "Le nom du média en gros", widget: "string" }
+              - { name: "title_bang", label: "Point d'exclamation", hint: "Symbole après le titre (généralement !)", widget: "string" }
+              - { name: "subtitle", label: "Sous-titre", hint: "Phrase d'accroche sous le titre", widget: "string" }
+              - { name: "baseline", label: "Baseline", hint: "Description en une ligne", widget: "text" }
+              - { name: "cta_primary_text", label: "Bouton principal — texte", hint: "Texte du gros bouton (ex: SOUTENIR / S'ABONNER)", widget: "string" }
+              - { name: "cta_primary_link", label: "Bouton principal — lien", hint: "Où mène le bouton (#soutenir pour aller à la section abonnements)", widget: "string" }
+              - { name: "cta_secondary_text", label: "Bouton secondaire — texte", hint: "Texte du deuxième bouton", widget: "string" }
+              - { name: "cta_secondary_link", label: "Bouton secondaire — lien", widget: "string" }
+              - { name: "scroll_text", label: "Texte d'invitation à défiler", hint: "Petit texte sous les boutons", widget: "string" }
               - name: "badge_lines"
                 label: "Badge (lignes)"
+                hint: "Texte du badge rond sur la couverture — une ligne par entrée"
                 widget: "list"
                 minimize_collapsed: true
               - name: "kraft_bar"
-                label: "Bandeau kraft (textes alternés)"
+                label: "Bandeau kraft"
+                hint: "Textes qui défilent dans la barre en haut — une entrée par texte"
                 widget: "list"
                 minimize_collapsed: true
-              - { name: "cover_image", label: "Image de couverture (fichier)", widget: "string" }
-              - { name: "cover_alt", label: "Texte alternatif image", widget: "string" }
+              - { name: "cover_image", label: "Image de couverture", hint: "Nom du fichier image (ex: journal-cover.png)", widget: "string" }
+              - { name: "cover_alt", label: "Description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string" }
 
           # --- MANIFESTE ---
           - name: "manifeste"
-            label: "Manifeste"
+            label: "2. Manifeste"
             widget: "object"
+            summary: "{{fields.section_title_1}}"
             fields:
               - { name: "section_num", label: "Numéro de section", widget: "string" }
               - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
               - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
-              - { name: "section_tag", label: "Étiquette", widget: "string" }
-              - { name: "dropcap", label: "Paragraphe d'intro (lettrine)", widget: "markdown" }
+              - { name: "section_tag", label: "Étiquette", hint: "Petit texte à côté du titre", widget: "string" }
+              - { name: "dropcap", label: "Paragraphe d'ouverture", hint: "Le premier paragraphe avec la grande lettrine. Vous pouvez utiliser du gras/italique.", widget: "markdown" }
               - name: "paragraphs"
                 label: "Paragraphes du manifeste"
+                hint: "Ajoutez, supprimez ou réordonnez les paragraphes"
                 widget: "list"
                 minimize_collapsed: true
+                summary: "{{fields.text}}"
                 field: { name: "text", label: "Paragraphe", widget: "markdown" }
-              - { name: "aside_label", label: "Étiquette aside", widget: "string" }
-              - { name: "aside_text", label: "Texte aside", widget: "text" }
-              - { name: "aside_link_text", label: "Lien aside (texte)", widget: "string" }
-              - { name: "aside_link_url", label: "Lien aside (URL)", widget: "string" }
-              - { name: "pull_quote", label: "Citation forte", widget: "markdown" }
+              - { name: "aside_label", label: "Étiquette du lien externe", hint: "Texte du ruban à droite", widget: "string" }
+              - { name: "aside_text", label: "Texte du lien externe", widget: "text" }
+              - { name: "aside_link_text", label: "Texte du bouton", widget: "string" }
+              - { name: "aside_link_url", label: "URL du lien", widget: "string" }
+              - { name: "pull_quote", label: "Citation forte", hint: "La phrase mise en avant en bas à droite", widget: "markdown" }
 
           # --- SOUTENIR ---
           - name: "soutenir"
-            label: "Soutenir (abonnements & dons)"
+            label: "3. Soutenir (abonnements & dons)"
             widget: "object"
+            summary: "{{fields.section_title_1}}"
             fields:
               - { name: "section_num", label: "Numéro de section", widget: "string" }
               - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
               - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
               - { name: "section_tag", label: "Étiquette", widget: "string" }
               - name: "formules"
-                label: "Formules"
+                label: "Formules d'abonnement / don"
+                hint: "Les trois cartes de soutien. Pour mettre une carte en avant, cochez 'Mettre en avant'."
                 widget: "list"
                 minimize_collapsed: true
+                summary: "{{fields.tape}}"
                 fields:
-                  - { name: "tape", label: "Étiquette", widget: "string" }
-                  - { name: "price", label: "Prix", widget: "string" }
-                  - { name: "price_unit", label: "Unité", widget: "string" }
-                  - { name: "desc", label: "Description", widget: "text" }
-                  - { name: "button_text", label: "Bouton (texte)", widget: "string" }
-                  - { name: "button_link", label: "Bouton (lien)", widget: "string" }
-                  - { name: "highlight", label: "Mettre en avant", widget: "boolean", default: false }
-                  - { name: "flag", label: "Drapeau (ex: MEILLEUR CHOIX)", widget: "string", default: "" }
-              - { name: "transparency_title", label: "Titre transparence", widget: "string" }
+                  - { name: "tape", label: "Étiquette de la carte", hint: "Texte en haut de la carte (ex: LECTEUR, ABONNÉ)", widget: "string" }
+                  - { name: "price", label: "Prix", hint: "Montant affiché en gros (ex: 8€, 40€, Libre)", widget: "string" }
+                  - { name: "price_unit", label: "Unité", hint: "Texte petit sous le prix (ex: /numéro, /an · 6 n°)", widget: "string" }
+                  - { name: "desc", label: "Description", hint: "Texte explicatif de la formule", widget: "text" }
+                  - { name: "button_text", label: "Texte du bouton", widget: "string" }
+                  - { name: "button_link", label: "Lien du bouton", hint: "URL Yapla ou # pour plus tard", widget: "string" }
+                  - { name: "highlight", label: "Mettre en avant", hint: "Cochez pour la carte 'MEILLEUR CHOIX' (fond coloré)", widget: "boolean", default: false }
+                  - { name: "flag", label: "Drapeau", hint: "Texte du drapeau (ex: MEILLEUR CHOIX). Laisser vide si pas de drapeau.", widget: "string", default: "" }
+              - { name: "transparency_title", label: "Titre transparence", hint: "Titre de la section 'Où va votre argent'", widget: "string" }
               - name: "transparency_bars"
-                label: "Barres de transparence"
+                label: "Répartition des dépenses"
+                hint: "Les barres qui montrent où va l'argent"
                 widget: "list"
                 minimize_collapsed: true
+                summary: "{{fields.pct}} — {{fields.label}}"
                 fields:
                   - { name: "pct", label: "Pourcentage", widget: "string" }
                   - { name: "label", label: "Libellé", widget: "string" }
-              - { name: "transparency_note", label: "Note de transparence", widget: "markdown" }
+              - { name: "transparency_note", label: "Note de transparence", hint: "Phrase en bas de la section", widget: "markdown" }
               - { name: "adresse_label", label: "Étiquette adresse", widget: "string" }
-              - { name: "adresse_text", label: "Texte adresse", widget: "text" }
+              - { name: "adresse_text", label: "Texte adresse", hint: "Info sur la collecte d'adresse postale", widget: "text" }
 
           # --- DERNIER NUMÉRO ---
           - name: "numero"
-            label: "Dernier numéro"
+            label: "4. Dernier numéro"
             widget: "object"
+            summary: "{{fields.section_title_1}}"
             fields:
               - { name: "section_num", label: "Numéro de section", widget: "string" }
               - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
               - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
               - { name: "section_tag", label: "Étiquette", widget: "string" }
-              - { name: "preview_tape", label: "Étiquette aperçu", widget: "string" }
+              - { name: "preview_tape", label: "Étiquette aperçu", hint: "Texte sur l'aperçu de la Une", widget: "string" }
               - { name: "preview_title", label: "Titre aperçu", widget: "string" }
               - { name: "preview_title_bang", label: "Bang aperçu", widget: "string" }
               - { name: "preview_headline", label: "Manchette aperçu", widget: "string" }
               - { name: "preview_sub", label: "Sous-titre aperçu", widget: "string" }
               - { name: "poster_tag", label: "Étiquette poster", widget: "string" }
               - { name: "jeux_tape", label: "Étiquette jeux", widget: "string" }
-              - { name: "jeux_intro", label: "Intro jeux", widget: "text" }
-              - { name: "jeux_content", label: "Réponses des jeux", widget: "markdown" }
-              - { name: "engagement_title", label: "Titre engagement", widget: "string" }
-              - { name: "engagement_text", label: "Texte engagement", widget: "markdown" }
-              - { name: "engagement_button_text", label: "Bouton engagement (texte)", widget: "string" }
-              - { name: "engagement_button_link", label: "Bouton engagement (lien)", widget: "string" }
+              - { name: "jeux_intro", label: "Introduction jeux", hint: "Texte au-dessus des réponses", widget: "text" }
+              - { name: "jeux_content", label: "Réponses des jeux", hint: "Les solutions des mots croisés et fléchés. Mettre à jour à chaque nouveau numéro.", widget: "markdown" }
+              - { name: "engagement_title", label: "Titre engagement", hint: "Titre du bloc 'Prendre la plume'", widget: "string" }
+              - { name: "engagement_text", label: "Texte engagement", hint: "Invitation à contribuer", widget: "markdown" }
+              - { name: "engagement_button_text", label: "Bouton engagement — texte", widget: "string" }
+              - { name: "engagement_button_link", label: "Bouton engagement — lien", hint: "Adresse email (ex: mailto:contact@causetoujours.fr)", widget: "string" }
 
           # --- OÙ NOUS RETROUVER ---
           - name: "trouver"
-            label: "Points de vente"
+            label: "5. Points de vente"
             widget: "object"
+            summary: "{{fields.section_title_1}}"
             fields:
               - { name: "section_num", label: "Numéro de section", widget: "string" }
               - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
@@ -136,45 +156,51 @@ collections:
               - { name: "section_tag", label: "Étiquette", widget: "string" }
               - name: "locations"
                 label: "Points de vente"
+                hint: "Ajoutez, supprimez ou réordonnez les lieux de vente"
                 widget: "list"
                 minimize_collapsed: true
+                summary: "{{fields.name}}"
                 fields:
                   - { name: "num", label: "Numéro", widget: "string" }
-                  - { name: "name", label: "Nom", widget: "string" }
+                  - { name: "name", label: "Nom du lieu", widget: "string" }
                   - { name: "address", label: "Adresse", widget: "string" }
-              - { name: "map_text", label: "Texte carte", widget: "text" }
+              - { name: "map_text", label: "Texte carte", hint: "Texte affiché dans l'emplacement de la carte", widget: "text" }
 
           # --- QUI SOMMES-NOUS ---
           - name: "qui"
-            label: "Qui sommes-nous"
+            label: "6. Qui sommes-nous"
             widget: "object"
+            summary: "{{fields.section_title_1}}"
             fields:
               - { name: "section_num", label: "Numéro de section", widget: "string" }
               - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
               - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
               - { name: "section_tag", label: "Étiquette", widget: "string" }
               - name: "paragraphs"
-                label: "Paragraphes"
+                label: "Paragraphes de présentation"
                 widget: "list"
                 minimize_collapsed: true
+                summary: "{{fields.text}}"
                 field: { name: "text", label: "Paragraphe", widget: "markdown" }
               - { name: "social_title", label: "Titre réseaux sociaux", widget: "string" }
               - { name: "social_text", label: "Texte réseaux sociaux", widget: "markdown" }
-              - { name: "social_link_text", label: "Lien réseau (texte)", widget: "string" }
-              - { name: "social_link_url", label: "Lien réseau (URL)", widget: "string" }
+              - { name: "social_link_text", label: "Lien réseau — texte", widget: "string" }
+              - { name: "social_link_url", label: "Lien réseau — URL", widget: "string" }
               - { name: "cc_label", label: "Étiquette Cause Commune", widget: "string" }
               - { name: "cc_name", label: "Nom Cause Commune", widget: "string" }
               - { name: "cc_detail", label: "Détail Cause Commune", widget: "string" }
 
           # --- FOOTER ---
           - name: "footer"
-            label: "Pied de page"
+            label: "7. Pied de page"
             widget: "object"
+            summary: "{{fields.logo}}"
             fields:
               - { name: "logo", label: "Logo (texte)", widget: "string" }
               - { name: "logo_bang", label: "Bang", widget: "string" }
               - { name: "text", label: "Texte pied de page", widget: "string" }
               - name: "bar_items"
-                label: "Éléments barre pied de page"
+                label: "Éléments de la barre"
+                hint: "Textes séparés par des points dans le pied de page"
                 widget: "list"
                 minimize_collapsed: true
