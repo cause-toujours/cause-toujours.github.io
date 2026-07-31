@@ -107,9 +107,9 @@
     "section_title_2": "RETROUVER\u00a0?",
     "section_tag": "POINTS DE VENTE",
     "locations": [
-      { "num": "01", "name": "Le QG", "address": "12 rue de la Loge, Montpellier", "lat": 43.6096, "lng": 3.8778, "color": "#C8302A" },
+      { "num": "01", "name": "Le QG", "address": "2 Quai des Tanneurs, 34090 Montpellier", "lat": 43.6159, "lng": 3.8749, "color": "#C8302A" },
       { "num": "02", "name": "Biocoop Garrigues", "address": "25 av. des Marris, Montpellier", "lat": 43.6085, "lng": 3.8729, "color": "#7BB89C" },
-      { "num": "03", "name": "Théâtre de la Plume", "address": "5 rue de l'Aiguillerie, Montpellier", "lat": 43.6104, "lng": 3.8775, "color": "#D4A537" },
+      { "num": "03", "name": "Théâtre de la Plume", "address": "6 Rue Guillaume Pellicier, 34070 Montpellier", "lat": 43.6086, "lng": 3.8670, "color": "#D4A537" },
       { "num": "04", "name": "Le Grain des Mots", "address": "2 cours Gambetta, Montpellier", "lat": 43.6055, "lng": 3.8745, "color": "#5B8BA0" }
     ],
     "map_text": "Carte des points de vente<br>(à intégrer)"
@@ -125,11 +125,11 @@
     ],
     "social_title": "SUIVEZ-NOUS",
     "social_text": "Sur Instagram, via le compte de notre grande sœur\u00a0:",
-    "social_link_text": "@CAUSECOMMUNE →",
-    "social_link_url": "https://www.instagram.com/causecommune93.1/",
+    "social_link_text": "@CAUSECOMMUNE.MTP →",
+    "social_link_url": "https://www.instagram.com/causecommune.mtp/",
     "cc_label": "UN PROJET DE LA FAMILLE",
     "cc_name": "CAUSE COMMUNE",
-    "cc_detail": "93.1 FM · Radio libre · Paris"
+    "cc_detail": "Parti politique · Montpellier"
   },
   "footer": {
     "logo": "CAUSE TOUJOURS",
