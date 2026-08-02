@@ -348,6 +348,27 @@ ul { list-style: none; }
 .block-title-light { font-family: var(--font-narrow); font-weight: 700; font-style: italic; font-size: 1.3rem; text-transform: uppercase; margin-bottom: 8px; color: var(--noir); }
 .engagement-block p { font-size: 0.9rem; margin-bottom: 16px; }
 
+/* Banderole "Prendre la plume" — pleine largeur en haut de la section 03 */
+.engagement-banner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--cream-dark);
+  border: var(--border-4);
+  box-shadow: var(--shadow);
+  padding: 22px 28px;
+  margin-bottom: 40px;
+  transform: rotate(-0.3deg);
+}
+.engagement-banner .block-title { margin-bottom: 0; flex-shrink: 0; }
+.engagement-banner p { flex: 1; min-width: 220px; margin-bottom: 0; font-size: 0.95rem; }
+.engagement-banner .btn-outline { flex-shrink: 0; }
+@media (max-width: 768px) {
+  .engagement-banner { flex-direction: column; align-items: flex-start; transform: none; }
+  .engagement-banner p { width: 100%; }
+}
+
 /* --- OÙ NOUS RETROUVER --- */
 .trouver-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 .trouver-list { display: flex; flex-direction: column; }

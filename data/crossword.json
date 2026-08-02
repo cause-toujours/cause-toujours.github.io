@@ -1,0 +1,21 @@
+{
+  "title": "Mots croisés du N°001",
+  "intro": "Un petit puzzle à dévorer avec le journal. Cliquez une case, tapez, et bonne chance !",
+  "cols": 8,
+  "rows": 6,
+  "grid": [
+    [null, "P", "R", "E", "S", "S", "E", null],
+    [null, "A", null, null, null, null, null, "N"],
+    [null, "P", "I", "E", "C", "E", null, "C"],
+    [null, "I", null, null, null, null, null, "R"],
+    [null, "E", null, "V", "I", "L", "L", "E"],
+    [null, "R", null, null, null, null, null, null]
+  ],
+  "words": [
+    { "num": 1, "dir": "across", "row": 0, "col": 1, "answer": "PRESSE", "clue": "Ce que Cause Toujours défend, sur papier" },
+    { "num": 1, "dir": "down",   "row": 0, "col": 1, "answer": "PAPIER", "clue": "Le support revendiqué, contre l'infobésité" },
+    { "num": 2, "dir": "down",   "row": 0, "col": 7, "answer": "ENCRE",  "clue": "Ce qui tache les doigts en imprimant" },
+    { "num": 3, "dir": "across", "row": 2, "col": 1, "answer": "PIECE",  "clue": "Article, parution dans un journal" },
+    { "num": 4, "dir": "across", "row": 4, "col": 3, "answer": "VILLE",  "clue": "Montpellier, en l'occurrence" }
+  ]
+}

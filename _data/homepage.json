@@ -93,9 +93,6 @@
     "preview_image": "journal-page3.png",
     "preview_image_alt": "Page intérieure du N°001 — Cause Toujours !",
     "poster_tag": "↑ POSTER A2 DÉPLIABLE",
-    "jeux_tape": "RÉPONSES DES JEUX",
-    "jeux_intro": "Les solutions des mots croisés et fléchés du dernier numéro.",
-    "jeux_content": "<em>Les réponses seront publiées ici à la sortie du prochain numéro.</em>",
     "engagement_title": "PRENDRE LA PLUME",
     "engagement_text": "Vous écrivez, dessinez, photographiez\u00a0? Contribuez au prochain numéro.",
     "engagement_button_text": "ÉCRIRE À LA RÉDAC →",
@@ -127,6 +124,8 @@
     "social_text": "Sur Instagram, via le compte de notre grande sœur\u00a0:",
     "social_link_text": "@CAUSECOMMUNE.MTP →",
     "social_link_url": "https://www.instagram.com/causecommune.mtp/",
+    "ig_tape_label": "DERNIER POST · INSTAGRAM",
+    "ig_intro": "On y poste les coulisses, les extraits et les annonces.",
     "cc_label": "UN PROJET DE LA FAMILLE",
     "cc_name": "CAUSE COMMUNE",
     "cc_detail": "Parti politique · Montpellier"

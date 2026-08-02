@@ -1,0 +1,35 @@
+name: Fetch Instagram feed
+
+on:
+  schedule:
+    # Tous les jours à 6h00 UTC. Ajuste si besoin.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {} # permet de le lancer manuellement depuis l'onglet Actions
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout du repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Récupérer les derniers posts
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: node fetch-instagram.mjs
+
+      - name: Commit et push si changement
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/instagram.json
+          git diff --staged --quiet || git commit -m "chore: mise à jour du flux Instagram"
+          git push

@@ -134,9 +134,6 @@ collections:
               - { name: "preview_image", label: "Image aperçu", hint: "Nom du fichier image (ex: journal-page3.png)", widget: "string" }
               - { name: "preview_image_alt", label: "Description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string" }
               - { name: "poster_tag", label: "Étiquette poster", widget: "string" }
-              - { name: "jeux_tape", label: "Étiquette jeux", widget: "string" }
-              - { name: "jeux_intro", label: "Introduction jeux", hint: "Texte au-dessus des réponses", widget: "text" }
-              - { name: "jeux_content", label: "Réponses des jeux", hint: "Les solutions des mots croisés et fléchés. Mettre à jour à chaque nouveau numéro.", widget: "markdown" }
               - { name: "engagement_title", label: "Titre engagement", hint: "Titre du bloc 'Prendre la plume'", widget: "string" }
               - { name: "engagement_text", label: "Texte engagement", hint: "Invitation à contribuer", widget: "markdown" }
               - { name: "engagement_button_text", label: "Bouton engagement — texte", widget: "string" }
@@ -184,6 +181,8 @@ collections:
               - { name: "social_text", label: "Texte réseaux sociaux", widget: "markdown" }
               - { name: "social_link_text", label: "Lien réseau — texte", widget: "string" }
               - { name: "social_link_url", label: "Lien réseau — URL", widget: "string" }
+              - { name: "ig_tape_label", label: "Étiquette ruban Instagram", hint: "Texte du ruban kraft au-dessus du dernier post (ex: DERNIER POST · INSTAGRAM)", widget: "string" }
+              - { name: "ig_intro", label: "Texte sous le post Instagram", hint: "Petite phrase sous l'aperçu du dernier post", widget: "text" }
               - { name: "cc_label", label: "Étiquette Cause Commune", widget: "string" }
               - { name: "cc_name", label: "Nom Cause Commune", widget: "string" }
               - { name: "cc_detail", label: "Détail Cause Commune", widget: "string" }

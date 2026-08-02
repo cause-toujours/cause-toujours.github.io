@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/instagram-feed.css">
+  <link rel="stylesheet" href="css/crossword.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
@@ -146,6 +148,12 @@
       <span class="sec-tag">{{ homepage.numero.section_tag }}</span>
     </div>
 
+    <div class="engagement-block engagement-banner">
+      <h3 class="block-title">{{ homepage.numero.engagement_title }}</h3>
+      <p>{{ homepage.numero.engagement_text | safe }}</p>
+      <a href="{{ homepage.numero.engagement_button_link }}" class="btn-outline">{{ homepage.numero.engagement_button_text }}</a>
+    </div>
+
     <div class="numero-grid">
       <div class="numero-left">
         <div class="preview-card">
@@ -158,18 +166,31 @@
       </div>
 
       <div class="numero-right">
-        <div class="jeux-block">
-          <div class="jeux-tape">{{ homepage.numero.jeux_tape }}</div>
-          <p class="jeux-intro">{{ homepage.numero.jeux_intro }}</p>
-          <div class="jeux-content">
-            <p>{{ homepage.numero.jeux_content | safe }}</p>
+        <div class="cw" id="crossword">
+          <div class="cw-head">
+            <span class="cw-title" id="cw-title">Mots croisés</span>
+            <span class="cw-progress" id="cw-progress">0 / 0 mots</span>
           </div>
-        </div>
+          <p class="cw-intro" id="cw-intro"></p>
 
-        <div class="engagement-block">
-          <h3 class="block-title">{{ homepage.numero.engagement_title }}</h3>
-          <p>{{ homepage.numero.engagement_text | safe }}</p>
-          <a href="{{ homepage.numero.engagement_button_link }}" class="btn-outline">{{ homepage.numero.engagement_button_text }}</a>
+          <div class="cw-grid" id="cw-grid" role="grid" aria-label="Grille de mots croisés"></div>
+
+          <div class="cw-clues">
+            <div class="cw-clues-group">
+              <h3>Horizontal</h3>
+              <ul class="cw-clues-list" id="cw-clues-across"></ul>
+            </div>
+            <div class="cw-clues-group">
+              <h3>Vertical</h3>
+              <ul class="cw-clues-list" id="cw-clues-down"></ul>
+            </div>
+          </div>
+
+          <div class="cw-controls">
+            <button type="button" class="cw-btn cw-btn--primary" id="cw-check">Vérifier</button>
+            <button type="button" class="cw-btn" id="cw-reveal">Révéler</button>
+            <button type="button" class="cw-btn cw-btn--ghost" id="cw-clear">Effacer</button>
+          </div>
         </div>
       </div>
     </div>
@@ -224,6 +245,18 @@
           <a href="{{ homepage.qui.social_link_url }}" target="_blank" class="btn-outline">{{ homepage.qui.social_link_text }}</a>
         </div>
 
+        <div class="ig-clip">
+          <div class="ig-clip-tape">
+            <span>{{ homepage.qui.ig_tape_label }}</span>
+            <span id="ig-clip-date"></span>
+          </div>
+          <a id="ig-post-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Voir le dernier post Instagram">
+            <img id="ig-post-image" src="" alt="" loading="lazy" />
+          </a>
+          <p id="ig-post-caption" class="ig-clip-caption"></p>
+          <p class="ig-clip-intro">{{ homepage.qui.ig_intro }}</p>
+        </div>
+
         <div class="cc-link">
           <span class="cc-label">{{ homepage.qui.cc_label }}</span>
           <strong>{{ homepage.qui.cc_name }}</strong>
@@ -246,6 +279,10 @@
       </div>
     </div>
   </footer>
+
+  <!-- === INSTAGRAM FEED === -->
+  <script src="js/instagram-feed.js" defer></script>
+  <script src="js/crossword.js" defer></script>
 
   <!-- === LEAFLET MAP === -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
