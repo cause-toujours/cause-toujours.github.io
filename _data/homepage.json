@@ -106,7 +106,7 @@
     "engagement_title": "PRENDRE LA PLUME",
     "engagement_text": "Vous écrivez, dessinez, photographiez\u00a0? Contribuez au prochain numéro.",
     "engagement_button_text": "ÉCRIRE À LA RÉDAC →",
-    "engagement_button_link": "mailto:contact@causetoujours.fr"
+    "engagement_button_link": "https://github.com/cause-toujours/cause-toujours.github.io/issues/new?title=Contribution&body=%23%23%23%20Type%20de%20contribution%0A%0A%23%23%23%20Mon%20texte%0A%0A"
   },
   "trouver": {
     "section_num": "04",
