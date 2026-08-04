@@ -252,7 +252,7 @@ ul { list-style: none; }
 .manifeste-pull strong { font-weight: 700; color: var(--white); }
 
 /* --- FORMULES --- */
-.formules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+.formules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 40px; }
 .formule {
   background: var(--cream-light); border: var(--border-4); box-shadow: var(--shadow);
   padding: 28px 24px; display: flex; flex-direction: column; position: relative;
