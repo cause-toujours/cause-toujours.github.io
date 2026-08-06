@@ -68,20 +68,27 @@ ul { list-style: none; }
 /* --- HEADER --- */
 .hd { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: var(--border-4); }
 .hd-inner {
-  max-width: var(--max-width); margin: 0 auto; padding: 14px 24px;
-  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  max-width: var(--max-width); margin: 0 auto; padding: 10px 24px;
+  display: flex; align-items: center; gap: 24px;
 }
-.logo { display: flex; flex-direction: column; line-height: 1; }
-.logo-ct {
-  font-family: var(--font-narrow); font-weight: 700; font-size: 1.3rem;
-  text-transform: uppercase; letter-spacing: -0.5px; font-style: italic; color: var(--noir);
+.hd-brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; flex-shrink: 0;
+  background: var(--noir);
+  font-family: var(--font-narrow); font-weight: 700; font-style: italic;
+  font-size: 1rem; color: var(--cream); line-height: 1;
+  transform: rotate(-3deg);
+  box-shadow: 3px 3px 0 var(--rouge);
 }
+.brand-dateline {
+  font-family: var(--font-sec); font-weight: 500;
+  font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--noir);
+}
+.brand-dateline em { font-style: normal; color: var(--rouge); }
+.brand-dateline .sep { opacity: 0.3; margin: 0 6px; }
 .bang { color: var(--rouge); }
-.logo-sub {
-  font-family: var(--font-sec); font-size: 0.5rem; font-weight: 500;
-  letter-spacing: 1.5px; text-transform: uppercase; color: var(--noir); opacity: 0.45; margin-top: 3px;
-}
-.hd-nav { display: flex; gap: 24px; }
+.hd-nav { display: flex; gap: 24px; margin-left: auto; }
 .hd-nav a {
   font-family: var(--font-sec); font-weight: 500; font-size: 0.8rem;
   text-transform: uppercase; letter-spacing: 1px;
@@ -101,13 +108,13 @@ ul { list-style: none; }
 /* --- HERO --- */
 .hero { border-bottom: var(--border-4); }
 .kraft-bar {
-  background: var(--noir); color: var(--cream);
+  background: var(--rouge); color: var(--cream);
   font-family: var(--font-sec); font-weight: 500; font-size: 0.7rem;
   letter-spacing: 2px; text-transform: uppercase; padding: 8px 24px;
   display: flex; justify-content: center; align-items: center; gap: 16px;
   flex-wrap: wrap; overflow: hidden; white-space: nowrap;
 }
-.kraft-dot { color: var(--rouge); font-size: 0.5rem; }
+.kraft-dot { color: var(--noir); font-size: 0.5rem; }
 .hero-grid {
   max-width: var(--max-width); margin: 0 auto; padding: 60px 24px 80px;
   display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center;
@@ -467,8 +474,8 @@ ul { list-style: none; }
   .formule-price { font-size: 2rem; }
   .transp { padding: 16px; }
   .hd-inner { padding: 8px 12px; }
-  .logo-ct { font-size: 1rem; }
-  .logo-sub { display: none; }
+  .brand-dateline { font-size: 0.55rem; letter-spacing: 1px; }
+  .brand-mark { width: 22px; height: 22px; font-size: 0.85rem; }
   .hero-baseline { font-size: 1rem; }
   .kraft-bar { font-size: 0.4rem; gap: 3px; }
   .hero-sticker { font-size: 0.6rem; padding: 4px 10px; }

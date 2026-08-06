@@ -15,7 +15,9 @@
     "cta_secondary_link": "#numero",
     "scroll_text": "↓ défile, on a écrit des trucs",
     "badge_lines": ["PREMIER", "NUMÉRO", "SEPT 2026"],
-    "kraft_bar": ["N°001 — SEPTEMBRE 2026", "TIRAGE LIMITÉ", "100% BÉNÉVOLE", "SANS PUB", "SANS MILLIARDAIRE"],
+    "dateline_date": "Septembre 2026",
+    "dateline_num": "N°001",
+    "kraft_bar": ["TIRAGE LIMITÉ", "100% BÉNÉVOLE", "SANS PUB", "SANS MILLIARDAIRE"],
     "cover_image": "journal-cover.png",
     "cover_alt": "Une du N°001 — Cause Toujours !"
   },

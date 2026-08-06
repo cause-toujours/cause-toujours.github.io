@@ -49,9 +49,11 @@ collections:
                 hint: "Texte du badge rond sur la couverture — une ligne par entrée"
                 widget: "list"
                 minimize_collapsed: true
+              - { name: "dateline_date", label: "Folio — date d'édition", hint: "Affichée en rouge dans la barre du haut (ex: Septembre 2026)", widget: "string" }
+              - { name: "dateline_num", label: "Folio — numéro", hint: "Affiché dans la barre du haut (ex: N°001)", widget: "string" }
               - name: "kraft_bar"
-                label: "Bandeau kraft"
-                hint: "Textes qui défilent dans la barre en haut — une entrée par texte"
+                label: "Bandeau rouge"
+                hint: "Textes qui défilent dans la barre rouge sous l'en-tête — une entrée par texte (le numéro et la date sont déjà dans le folio au-dessus)"
                 widget: "list"
                 minimize_collapsed: true
               - { name: "cover_image", label: "Image de couverture", hint: "Nom du fichier image (ex: journal-cover.png)", widget: "string" }
