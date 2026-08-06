@@ -4,7 +4,6 @@ backend:
   name: github
   repo: cause-toujours/cause-toujours.github.io
   branch: main
-  auth_type: pkce
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
