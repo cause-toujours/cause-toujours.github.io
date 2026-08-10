@@ -105,6 +105,10 @@
     "preview_image": "journal-page3.png",
     "preview_image_alt": "Page intérieure du N°001 — Cause Toujours !",
     "poster_tag": "↑ POSTER A2 DÉPLIABLE",
+    "poster_tape": "POSTER A2 · N°001",
+    "poster_image": "poster-a2.jpg",
+    "poster_image_alt": "Poster A2 du N°001 — Cause Toujours !",
+    "poster_caption": "Chaque numéro inclut un poster A2 signé par un artiste local.",
     "engagement_title": "PRENDRE LA PLUME",
     "engagement_text": "Vous écrivez, dessinez, photographiez\u00a0? Contribuez au prochain numéro.",
     "engagement_button_text": "ÉCRIRE À LA RÉDAC →",
@@ -130,7 +134,8 @@
     "section_tag": "L'ÉQUIPE",
     "paragraphs": [
       "<em>Cause Toujours !</em> est un collectif de bénévoles montpelliérains qui croit qu'une ville mérite un média qui lui ressemble : libre, impertinent, culturel, ancré.",
-      "Pas un relais de com'. Pas un journal de pub. Nous écrivons, imprimons, distribuons nous-mêmes. <strong>Personne ne nous dit quoi dire.</strong>"
+      "Pas un relais de com'. Pas un journal de pub. Nous écrivons, imprimons, distribuons nous-mêmes. <strong>Personne ne nous dit quoi dire.</strong>",
+      "<em>Cause Toujours !</em> est porté par <strong>Cause Commune</strong>, un mouvement citoyen et démocratique engagé à Montpellier."
     ],
     "social_title": "SUIVEZ-NOUS",
     "social_text": "Sur Instagram, via le compte de notre grande sœur\u00a0:",

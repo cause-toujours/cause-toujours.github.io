@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/instagram-feed.css">
-  <link rel="stylesheet" href="css/crossword.css">
+  <!-- <link rel="stylesheet" href="css/crossword.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
   <!-- === BANDEAU FAMILLE CSS === -->
@@ -221,31 +221,12 @@
       </div>
 
       <div class="numero-right">
-        <div class="cw" id="crossword">
-          <div class="cw-head">
-            <span class="cw-title" id="cw-title">Mots croisés</span>
-            <span class="cw-progress" id="cw-progress">0 / 0 mots</span>
+        <div class="poster-card">
+          <div class="poster-tape">{{ homepage.numero.poster_tape }}</div>
+          <div class="poster-image">
+            <img src="{{ homepage.numero.poster_image }}" alt="{{ homepage.numero.poster_image_alt }}">
           </div>
-          <p class="cw-intro" id="cw-intro"></p>
-
-          <div class="cw-grid" id="cw-grid" role="grid" aria-label="Grille de mots croisés"></div>
-
-          <div class="cw-clues">
-            <div class="cw-clues-group">
-              <h3>Horizontal</h3>
-              <ul class="cw-clues-list" id="cw-clues-across"></ul>
-            </div>
-            <div class="cw-clues-group">
-              <h3>Vertical</h3>
-              <ul class="cw-clues-list" id="cw-clues-down"></ul>
-            </div>
-          </div>
-
-          <div class="cw-controls">
-            <button type="button" class="cw-btn cw-btn--primary" id="cw-check">Vérifier</button>
-            <button type="button" class="cw-btn" id="cw-reveal">Révéler</button>
-            <button type="button" class="cw-btn cw-btn--ghost" id="cw-clear">Effacer</button>
-          </div>
+          <p class="poster-caption">{{ homepage.numero.poster_caption }}</p>
         </div>
       </div>
     </div>
@@ -337,7 +318,8 @@
 
   <!-- === INSTAGRAM FEED === -->
   <script src="js/instagram-feed.js" defer></script>
-  <script src="js/crossword.js" defer></script>
+  <!-- crossword.js — commenté pour le N°001, réactivé pour les prochains numéros -->
+  <!-- <script src="js/crossword.js" defer></script> -->
 
   <!-- === LEAFLET MAP === -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
