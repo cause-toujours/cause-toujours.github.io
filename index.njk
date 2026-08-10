@@ -281,24 +281,46 @@
           <a href="{{ homepage.qui.social_link_url }}" target="_blank" class="btn-outline">{{ homepage.qui.social_link_text }}</a>
         </div>
 
-        <div class="ig-clip">
-          <div class="ig-clip-tape">
-            <span>{{ homepage.qui.ig_tape_label }}</span>
-            <span id="ig-clip-date"></span>
-          </div>
-          <a id="ig-post-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Voir le dernier post Instagram">
-            <img id="ig-post-image" src="" alt="" loading="lazy" />
-          </a>
+      </div>
+    </div>
+
+    <div class="ig-clip" id="ig-clip">
+      <div class="ig-clip-tape">
+        <span>{{ homepage.qui.ig_tape_label }}</span>
+        <span id="ig-clip-date"></span>
+      </div>
+
+      <div class="ig-clip-body">
+        <div class="ig-clip-text">
           <p id="ig-post-caption" class="ig-clip-caption"></p>
-          <p class="ig-clip-intro">{{ homepage.qui.ig_intro }}</p>
+          <a id="ig-post-link" href="#" target="_blank" rel="noopener noreferrer" class="ig-clip-permalink">
+            Voir sur Instagram <span aria-hidden="true">→</span>
+          </a>
         </div>
 
-        <div class="cc-link">
-          <span class="cc-label">{{ homepage.qui.cc_label }}</span>
-          <strong>{{ homepage.qui.cc_name }}</strong>
-          <span class="cc-detail">{{ homepage.qui.cc_detail }}</span>
+        <div class="ig-clip-media">
+          <div class="ig-carousel" id="ig-carousel" aria-roledescription="carousel">
+            <button class="ig-carousel-nav ig-carousel-prev" id="ig-carousel-prev" type="button" aria-label="Image précédente" hidden>
+              <span aria-hidden="true">‹</span>
+            </button>
+            <div class="ig-carousel-frame">
+              <img id="ig-post-image" src="" alt="" loading="lazy" />
+            </div>
+            <button class="ig-carousel-nav ig-carousel-next" id="ig-carousel-next" type="button" aria-label="Image suivante" hidden>
+              <span aria-hidden="true">›</span>
+            </button>
+            <div class="ig-carousel-counter" id="ig-carousel-counter" hidden></div>
+          </div>
         </div>
       </div>
+
+      <p class="ig-clip-intro">{{ homepage.qui.ig_intro }}</p>
+    </div>
+
+    <div class="cc-link">
+      <span class="cc-label">{{ homepage.qui.cc_label }}</span>
+      <strong>{{ homepage.qui.cc_name }}</strong>
+      <span class="cc-detail">{{ homepage.qui.cc_detail }}</span>
     </div>
   </section>
 

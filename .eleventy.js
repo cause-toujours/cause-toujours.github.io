@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("versions");
   eleventyConfig.addPassthroughCopy("journal-cover.png");
   eleventyConfig.addPassthroughCopy("journal-page3.png");
+  eleventyConfig.addPassthroughCopy("poster-a2.jpg");
 
   return {
     templateFormats: ["njk", "md"],
