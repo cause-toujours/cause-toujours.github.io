@@ -81,9 +81,9 @@
         <span class="brand-dateline">Montpellier <span class="sep">·</span> <em>{{ homepage.hero.dateline_date }}</em> <span class="sep">·</span> {{ homepage.hero.dateline_num }}</span>
       </a>
       <nav class="hd-nav">
-        <a href="#manifeste">Manifeste</a>
         <a href="#soutenir">Soutenir</a>
         <a href="#numero">Numéro</a>
+        <a href="#manifeste">Manifeste</a>
         <a href="#trouver">Trouver</a>
       </nav>
       <a href="#soutenir" class="btn-hd">S'ABONNER →</a>
@@ -125,34 +125,19 @@
     </div>
   </section>
 
-  <!-- === MANIFESTE === -->
-  <section class="section" id="manifeste">
+  <!-- === PRÉSENTATION === -->
+  <section class="section" id="presentation">
     <div class="sec-head">
-      <span class="sec-num">{{ homepage.manifeste.section_num }}</span>
-      <h2 class="sec-title">{{ homepage.manifeste.section_title_1 }}<br>{{ homepage.manifeste.section_title_2 | safe }}</h2>
-      <span class="sec-tag">{{ homepage.manifeste.section_tag }}</span>
+      <span class="sec-num">{{ homepage.presentation.section_num }}</span>
+      <h2 class="sec-title">{{ homepage.presentation.section_title_1 }}<br>{{ homepage.presentation.section_title_2 }}</h2>
+      <span class="sec-tag">{{ homepage.presentation.section_tag }}</span>
     </div>
 
-    <div class="manifeste-layout">
-      <div class="manifeste-main">
-        <p class="dropcap">{{ homepage.manifeste.dropcap | safe }}</p>
-        {% for para in homepage.manifeste.paragraphs %}
-        <p>{{ para | safe }}</p>
-        {% endfor %}
-      </div>
-
-      <aside class="manifeste-aside">
-        <div class="tape tape-accent">
-          <span>{{ homepage.manifeste.aside_label }}</span>
-        </div>
-        <div class="aside-body">
-          <p>{{ homepage.manifeste.aside_text }}</p>
-          <a href="{{ homepage.manifeste.aside_link_url }}" target="_blank" class="link-block">{{ homepage.manifeste.aside_link_text }}</a>
-        </div>
-        <div class="manifeste-pull">
-          <p><strong>{{ homepage.manifeste.pull_quote | safe }}</strong></p>
-        </div>
-      </aside>
+    <div class="manifeste-main">
+      <p class="dropcap">{{ homepage.presentation.intro | safe }}</p>
+      {% for para in homepage.presentation.paragraphs %}
+      <p>{{ para | safe }}</p>
+      {% endfor %}
     </div>
   </section>
 
@@ -200,7 +185,7 @@
     <div class="sec-head">
       <span class="sec-num">{{ homepage.numero.section_num }}</span>
       <h2 class="sec-title">{{ homepage.numero.section_title_1 }}<br>{{ homepage.numero.section_title_2 }}</h2>
-      <span class="sec-tag">{{ homepage.numero.section_tag }}</span>
+      {% if homepage.numero.section_tag %}<span class="sec-tag">{{ homepage.numero.section_tag }}</span>{% endif %}
     </div>
 
     <div class="engagement-block engagement-banner">
@@ -216,19 +201,52 @@
           <div class="preview-image">
             <img src="{{ homepage.numero.preview_image }}" alt="{{ homepage.numero.preview_image_alt }}">
           </div>
-          <div class="preview-poster-tag">{{ homepage.numero.poster_tag }}</div>
         </div>
       </div>
 
       <div class="numero-right">
         <div class="poster-card">
-          <div class="poster-tape">{{ homepage.numero.poster_tape }}</div>
+          <div class="poster-head">
+            <span class="poster-tape">{{ homepage.numero.poster_tape }}</span>
+            <a class="poster-artist-link" href="{{ homepage.numero.poster_artist_url }}" target="_blank" rel="noopener">Artiste&nbsp;: {{ homepage.numero.poster_artist }} <span aria-hidden="true">→</span></a>
+          </div>
           <div class="poster-image">
             <img src="{{ homepage.numero.poster_image }}" alt="{{ homepage.numero.poster_image_alt }}">
           </div>
           <p class="poster-caption">{{ homepage.numero.poster_caption }}</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- === MANIFESTE === -->
+  <section class="section" id="manifeste">
+    <div class="sec-head">
+      <span class="sec-num">{{ homepage.manifeste.section_num }}</span>
+      <h2 class="sec-title">{{ homepage.manifeste.section_title_1 }}<br>{{ homepage.manifeste.section_title_2 | safe }}</h2>
+      <span class="sec-tag">{{ homepage.manifeste.section_tag }}</span>
+    </div>
+
+    <div class="manifeste-layout">
+      <div class="manifeste-main">
+        <p class="dropcap">{{ homepage.manifeste.dropcap | safe }}</p>
+        {% for para in homepage.manifeste.paragraphs %}
+        <p>{{ para | safe }}</p>
+        {% endfor %}
+      </div>
+
+      <aside class="manifeste-aside">
+        <div class="tape tape-accent">
+          <span>{{ homepage.manifeste.aside_label }}</span>
+        </div>
+        <div class="aside-body">
+          <p>{{ homepage.manifeste.aside_text }}</p>
+          <a href="{{ homepage.manifeste.aside_link_url }}" target="_blank" class="link-block">{{ homepage.manifeste.aside_link_text }}</a>
+        </div>
+        <div class="manifeste-pull">
+          <p><strong>{{ homepage.manifeste.pull_quote | safe }}</strong></p>
+        </div>
+      </aside>
     </div>
   </section>
 
@@ -284,7 +302,7 @@
       </div>
     </div>
 
-    <div class="ig-clip" id="ig-clip">
+    <div class="ig-clip" id="ig-clip" data-override-id="{{ homepage.qui.ig_override_post_id | default('', true) }}">
       <div class="ig-clip-tape">
         <span>{{ homepage.qui.ig_tape_label }}</span>
         <span id="ig-clip-date"></span>
@@ -317,23 +335,28 @@
       <p class="ig-clip-intro">{{ homepage.qui.ig_intro }}</p>
     </div>
 
-    <div class="cc-link">
-      <span class="cc-label">{{ homepage.qui.cc_label }}</span>
-      <strong>{{ homepage.qui.cc_name }}</strong>
-      <span class="cc-detail">{{ homepage.qui.cc_detail }}</span>
-    </div>
   </section>
 
   <!-- === FOOTER === -->
   <footer class="ft">
     <div class="ft-inner">
-      <div class="ft-logo">{{ homepage.footer.logo }}<span class="bang">{{ homepage.footer.logo_bang }}</span></div>
-      <p class="ft-text">{{ homepage.footer.text }}</p>
-      <div class="ft-bar">
-        {% for item in homepage.footer.bar_items %}
-        <span>{{ item }}</span>
-        {% if not loop.last %}<span class="ft-dot">●</span>{% endif %}
-        {% endfor %}
+      <div class="ft-main">
+        <div class="ft-logo">{{ homepage.footer.logo }}<span class="bang">{{ homepage.footer.logo_bang }}</span></div>
+        <p class="ft-text">{{ homepage.footer.text }}</p>
+        <div class="ft-bar">
+          {% for item in homepage.footer.bar_items %}
+          <span>{{ item }}</span>
+          {% if not loop.last %}<span class="ft-dot">●</span>{% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="ft-cc">
+        <img src="{{ homepage.footer.cc_logo }}" alt="{{ homepage.footer.cc_logo_alt }}">
+        <div class="ft-cc-text">
+          <span class="ft-cc-label">{{ homepage.qui.cc_label }}</span>
+          <strong>{{ homepage.qui.cc_name }}</strong>
+          <span class="ft-cc-detail">{{ homepage.qui.cc_detail }}</span>
+        </div>
       </div>
     </div>
   </footer>

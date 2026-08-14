@@ -1,17 +1,17 @@
 {
   "meta": {
     "title": "Cause Toujours ! — Média local indépendant · Montpellier",
-    "description": "Média papier bi-mensuel, indépendant, bénévole et engagé. Montpellier."
+    "description": "Média papier bimestriel, indépendant, bénévole et engagé. Montpellier."
   },
   "hero": {
     "sticker": "NOUVEAU MÉDIA",
     "title": "CAUSE TOUJOURS",
     "title_bang": "!",
     "subtitle": "L'info de Montpellier qui s'affiche en grand",
-    "baseline": "Papier. Bi-mensuel. Indépendant des milliardaires et des pouvoirs locaux. 100% bénévole. Montpellier.",
+    "baseline": "Papier. Bimestriel. Indépendant des milliardaires et des pouvoirs locaux. 100% bénévole. Montpellier.",
     "cta_primary_text": "SOUTENIR / S'ABONNER →",
     "cta_primary_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
-    "cta_secondary_text": "LIRE LE N°001",
+    "cta_secondary_text": "Voir le dernier numéro",
     "cta_secondary_link": "#numero",
     "scroll_text": "↓ défile, on a écrit des trucs",
     "badge_lines": ["PREMIER", "NUMÉRO", "SEPT 2026"],
@@ -21,14 +21,24 @@
     "cover_image": "journal-cover.png",
     "cover_alt": "Une du N°001 — Cause Toujours !"
   },
-  "manifeste": {
+  "presentation": {
     "section_num": "01",
+    "section_title_1": "AU SOMMAIRE",
+    "section_title_2": "DU N°001",
+    "section_tag": "PRÉSENTATION",
+    "intro": "Présentation thématique du numéro en cours.",
+    "paragraphs": [
+      "Le texte de présentation arrivera prochainement."
+    ]
+  },
+  "manifeste": {
+    "section_num": "04",
     "section_title_1": "POURQUOI",
     "section_title_2": "UN MÉDIA\u00a0?",
     "section_tag": "MINI-MANIFESTE",
     "dropcap": "La presse locale est morte. <em>Midi Libre</em> appartient à des milliardaires, la com' institutionnelle noie l'information sous les communiqués. Il manque une voix libre, indépendante, qui ne rend de comptes qu'à ses lecteurs.",
     "paragraphs": [
-      "Nous avons choisi le <strong>papier bi-mensuel</strong> contre l'infobésité et le flux continu d'écrans. Un objet qu'on garde, qu'on relit, qu'on prête. Pas une notification qu'on oublie.",
+      "Nous avons choisi le <strong>papier bimestriel</strong> contre l'infobésité et le flux continu d'écrans. Un objet qu'on garde, qu'on relit, qu'on prête. Pas une notification qu'on oublie.",
       "<strong>100 % bénévole et engagé.</strong> Personne ne prend de salaire. Chaque euro finance le prochain numéro. Pas d'actionnaires, pas de subventions conditionnelles, pas de pub déguisée.",
       "<em>Cause Toujours !</em> est un média ancré à Montpellier — culture, luttes, ville, gens — sans filtre et sans peur."
     ],
@@ -49,7 +59,7 @@
         "price": "24€",
         "price_unit": "/an · 6 n° · 2€/mois",
         "desc": "Le minimum vital. Tu reçois les 6 numéros de l'année chez toi.",
-        "button_text": "S'INSCRIRE →",
+        "button_text": "S'ABONNER →",
         "button_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
         "highlight": false,
         "flag": ""
@@ -59,7 +69,7 @@
         "price": "60€",
         "price_unit": "/an · 6 n° · 5€/mois",
         "desc": "L'abonnement standard. 6 numéros + la marge pour imprimer plus.",
-        "button_text": "S'INSCRIRE →",
+        "button_text": "S'ABONNER →",
         "button_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
         "highlight": true,
         "flag": "MEILLEUR CHOIX"
@@ -69,7 +79,7 @@
         "price": "96€",
         "price_unit": "/an · 6 n° · 8€/mois",
         "desc": "8€ le couvre le coût brut d'impression d'un numéro. Tu finances directement le papier.",
-        "button_text": "S'INSCRIRE →",
+        "button_text": "S'ABONNER →",
         "button_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
         "highlight": false,
         "flag": ""
@@ -79,7 +89,7 @@
         "price": "240€",
         "price_unit": "/an · 6 n° · 20€/mois",
         "desc": "Le maximum. Permet de rémunérer les artistes locaux et d'envisager des emplois.",
-        "button_text": "S'INSCRIRE →",
+        "button_text": "S'ABONNER →",
         "button_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
         "highlight": false,
         "flag": ""
@@ -100,22 +110,24 @@
     "section_num": "03",
     "section_title_1": "LE DERNIER",
     "section_title_2": "NUMÉRO",
-    "section_tag": "EXTENSION DU PAPIER",
+    "section_tag": "",
     "preview_tape": "UNE DU N°001",
     "preview_image": "journal-page3.png",
     "preview_image_alt": "Page intérieure du N°001 — Cause Toujours !",
-    "poster_tag": "↑ POSTER A2 DÉPLIABLE",
+    "poster_tag": "",
     "poster_tape": "POSTER A2 · N°001",
-    "poster_image": "poster-a2.jpg",
-    "poster_image_alt": "Poster A2 du N°001 — Cause Toujours !",
+    "poster_image": "poster-a2-n001.png",
+    "poster_image_alt": "Poster A2 du N°001 par STBF — Cause Toujours !",
     "poster_caption": "Chaque numéro inclut un poster A2 signé par un artiste local.",
+    "poster_artist": "STBF",
+    "poster_artist_url": "https://www.instagram.com/stbf97/",
     "engagement_title": "PRENDRE LA PLUME",
     "engagement_text": "Vous écrivez, dessinez, photographiez\u00a0? Contribuez au prochain numéro.",
     "engagement_button_text": "ÉCRIRE À LA RÉDAC →",
-    "engagement_button_link": "https://github.com/cause-toujours/cause-toujours.github.io/issues/new?title=Contribution&body=%23%23%23%20Type%20de%20contribution%0A%0A%23%23%23%20Mon%20texte%0A%0A"
+    "engagement_button_link": "mailto:redaction@causetoujours.fr?subject=Contribution%20au%20prochain%20num%C3%A9ro&body=Type%20de%20contribution%20%3A%0A%0AMon%20texte%20%3A%0A%0A"
   },
   "trouver": {
-    "section_num": "04",
+    "section_num": "05",
     "section_title_1": "OÙ NOUS",
     "section_title_2": "RETROUVER\u00a0?",
     "section_tag": "POINTS DE VENTE",
@@ -128,7 +140,7 @@
     "map_text": "Carte des points de vente<br>(à intégrer)"
   },
   "qui": {
-    "section_num": "05",
+    "section_num": "06",
     "section_title_1": "QUI",
     "section_title_2": "SOMMES-NOUS\u00a0?",
     "section_tag": "L'ÉQUIPE",
@@ -141,8 +153,9 @@
     "social_text": "Sur Instagram, via le compte de notre grande sœur\u00a0:",
     "social_link_text": "@CAUSECOMMUNE.MTP →",
     "social_link_url": "https://www.instagram.com/causecommune.mtp/",
-    "ig_tape_label": "DERNIER POST · INSTAGRAM",
-    "ig_intro": "On y poste les coulisses, les extraits et les annonces.",
+      "ig_tape_label": "DERNIER POST · INSTAGRAM",
+      "ig_override_post_id": "",
+      "ig_intro": "On y poste les coulisses, les extraits et les annonces.",
     "cc_label": "UN PROJET DE LA FAMILLE",
     "cc_name": "CAUSE COMMUNE",
     "cc_detail": "Parti politique · Montpellier"
@@ -150,7 +163,9 @@
   "footer": {
     "logo": "CAUSE TOUJOURS",
     "logo_bang": "!",
-    "text": "Média local indépendant · Montpellier · 100% bénévole · Papier bi-mensuel",
+    "text": "Média local indépendant · Montpellier · 100% bénévole · Papier bimestriel",
+    "cc_logo": "logo-cc.png",
+    "cc_logo_alt": "Cause Commune Montpellier",
     "bar_items": ["© 2026", "Fait avec de l'encre et du logiciel libre", "Sans pub, sans milliardaire, sans pardon"]
   }
 }

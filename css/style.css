@@ -348,8 +348,18 @@ ul { list-style: none; }
 .poster-tape {
   display: inline-block; font-family: var(--font-sec); font-weight: 600;
   font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase;
-  background: var(--rouge); color: var(--white); padding: 4px 12px; margin-bottom: 16px;
+  background: var(--rouge); color: var(--white); padding: 4px 12px;
 }
+.poster-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin-bottom: 16px; flex-wrap: wrap;
+}
+.poster-artist-link {
+  font-family: var(--font-sec); font-weight: 500; font-size: 0.7rem;
+  letter-spacing: 1px; text-transform: uppercase;
+  border-bottom: 2px solid var(--noir); padding-bottom: 1px;
+}
+.poster-artist-link:hover { color: var(--rouge); border-color: var(--rouge); }
 .poster-image { border: var(--border-4); box-shadow: var(--shadow-sm); overflow: hidden; }
 .poster-image img { width: 100%; display: block; }
 .poster-caption {
@@ -436,7 +446,17 @@ ul { list-style: none; }
 
 /* --- FOOTER --- */
 .ft { background: var(--noir); color: var(--cream); border-top: var(--border-4); padding: 40px 24px; }
-.ft-inner { max-width: var(--max-width); margin: 0 auto; text-align: center; }
+.ft-inner {
+  max-width: var(--max-width); margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+}
+.ft-main { text-align: center; flex: 1; }
+.ft-cc { flex-shrink: 0; display: flex; align-items: center; gap: 12px; opacity: 0.45; }
+.ft-cc img { width: 56px; height: auto; }
+.ft-cc-text { display: flex; flex-direction: column; gap: 2px; }
+.ft-cc-label { font-family: var(--font-sec); font-size: 0.5rem; letter-spacing: 2px; text-transform: uppercase; }
+.ft-cc-text strong { font-family: var(--font-narrow); font-weight: 700; font-style: italic; font-size: 1rem; text-transform: uppercase; color: var(--rouge-light); }
+.ft-cc-detail { font-family: var(--font-sec); font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; }
 .ft-logo { font-family: var(--font-narrow); font-weight: 700; font-style: italic; font-size: 1.5rem; text-transform: uppercase; margin-bottom: 12px; }
 .ft-text { font-size: 0.85rem; margin-bottom: 16px; opacity: 0.6; }
 .ft-bar {
@@ -501,4 +521,13 @@ ul { list-style: none; }
   .trouver-num { font-size: 1.5rem; min-width: 30px; }
   .qui-card { padding: 16px; }
   .cc-link { padding: 16px; }
+  .ft-inner { flex-direction: column; gap: 20px; }
+  .ft-cc { flex-direction: row; justify-content: center; }
+  .ft-cc img { width: 44px; }
 }
+
+/* ============================================================
+   POSTER ARTIST / FOOTER LOGO / CONTACT MODAL
+   ============================================================ */
+
+   /* (réservé pour ajouts futurs) */

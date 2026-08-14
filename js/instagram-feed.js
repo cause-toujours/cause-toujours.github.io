@@ -29,7 +29,15 @@ async function loadInstagramFeed() {
       return;
     }
 
-    const post = posts[0];
+    // Override : si un ID de post est forcé via le CMS, on le cherche dans le flux
+    let post = posts[0];
+    const overrideId = clip.getAttribute("data-override-id");
+    if (overrideId) {
+      const found = posts.find((p) => p.id === overrideId);
+      if (found) {
+        post = found;
+      }
+    }
 
     // --- Lien Instagram ---
     if (link) link.href = post.permalink;

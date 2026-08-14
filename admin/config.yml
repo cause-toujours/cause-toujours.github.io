@@ -184,6 +184,7 @@ collections:
               - { name: "social_link_text", label: "Lien réseau — texte", widget: "string" }
               - { name: "social_link_url", label: "Lien réseau — URL", widget: "string" }
               - { name: "ig_tape_label", label: "Étiquette ruban Instagram", hint: "Texte du ruban kraft au-dessus du dernier post (ex: DERNIER POST · INSTAGRAM)", widget: "string" }
+              - { name: "ig_override_post_id", label: "Forcer un post spécifique (ID)", hint: "Laissez vide pour le dernier post automatique. Pour forcer un post, collez son ID Instagram (ex: 17936214747339836). L'ID s'affiche dans data/instagram.json après chaque sync.", widget: "string" }
               - { name: "ig_intro", label: "Texte sous le post Instagram", hint: "Petite phrase sous l'aperçu du dernier post", widget: "text" }
               - { name: "cc_label", label: "Étiquette Cause Commune", widget: "string" }
               - { name: "cc_name", label: "Nom Cause Commune", widget: "string" }
