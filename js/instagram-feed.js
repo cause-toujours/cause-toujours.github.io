@@ -18,6 +18,19 @@ async function loadInstagramFeed() {
   const prevBtn    = document.getElementById("ig-carousel-prev");
   const nextBtn    = document.getElementById("ig-carousel-next");
   const counterEl  = document.getElementById("ig-carousel-counter");
+  const frame      = carousel?.querySelector(".ig-carousel-frame");
+
+  // L'image porte son vrai ratio (1/1, 4/5, 9/16…) → le polaroid blanc
+  // s'enroule exactement autour, jamais de bandes vides sur desktop.
+  if (img && frame) {
+    img.addEventListener("load", () => {
+      const w = img.naturalWidth, h = img.naturalHeight;
+      if (!w || !h) return;
+      img.style.aspectRatio = `${w} / ${h}`;
+      // Images paysage (rare) : on contraint la largeur plutôt que la hauteur
+      frame.classList.toggle("ig-frame--wide", w / h > 1.1);
+    });
+  }
 
   try {
     const res = await fetch("/data/instagram.json", { cache: "no-store" });
@@ -97,7 +110,6 @@ async function loadInstagramFeed() {
 
       // Swipe tactile
       let touchX = null;
-      const frame = carousel?.querySelector(".ig-carousel-frame");
       frame?.addEventListener("touchstart", (e) => {
         touchX = e.changedTouches[0].clientX;
       }, { passive: true });

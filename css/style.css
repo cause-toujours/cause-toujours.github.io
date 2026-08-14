@@ -208,7 +208,17 @@ ul { list-style: none; }
 .section-alt {
   background: var(--cream-dark); max-width: 100%; padding-left: 24px; padding-right: 24px;
 }
-.section-alt > .sec-head, .section-alt > .trouver-grid { max-width: var(--max-width); margin-left: auto; margin-right: auto; }
+.section-alt > .sec-head,
+.section-alt > .trouver-grid,
+.section-alt > .qui-grid,
+.section-alt > .ig-clip,
+.section-alt > .formules,
+.section-alt > .transp,
+.section-alt > .adresse-note {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .sec-head { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 48px; flex-wrap: wrap; }
 .sec-num {
