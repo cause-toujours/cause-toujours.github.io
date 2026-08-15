@@ -60,9 +60,28 @@ collections:
               - { name: "cover_image", label: "Image de couverture", hint: "Nom du fichier image (ex: journal-cover.png)", widget: "string" }
               - { name: "cover_alt", label: "Description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string" }
 
+          # --- ÉDITO / PRÉSENTATION ---
+          - name: "presentation"
+            label: "2. Édito"
+            widget: "object"
+            summary: "{{fields.section_title_1}}"
+            fields:
+              - { name: "section_num", label: "Numéro de section", widget: "string" }
+              - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
+              - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
+              - { name: "section_tag", label: "Étiquette", hint: "Petit texte à côté du titre", widget: "string" }
+              - { name: "intro", label: "Paragraphe d'ouverture", hint: "Le premier paragraphe de l'édito, avec la grande lettrine. Vous pouvez utiliser du gras/italique.", widget: "markdown" }
+              - name: "paragraphs"
+                label: "Paragraphes de l'édito"
+                hint: "Ajoutez, supprimez ou réordonnez les paragraphes"
+                widget: "list"
+                minimize_collapsed: true
+                summary: "{{fields.text}}"
+                field: { name: "text", label: "Paragraphe", widget: "markdown" }
+
           # --- MANIFESTE ---
           - name: "manifeste"
-            label: "2. Manifeste"
+            label: "3. Manifeste"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
@@ -86,7 +105,7 @@ collections:
 
           # --- SOUTENIR ---
           - name: "soutenir"
-            label: "3. Soutenir (abonnements & dons)"
+            label: "4. Soutenir (abonnements & dons)"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
@@ -125,7 +144,7 @@ collections:
 
           # --- DERNIER NUMÉRO ---
           - name: "numero"
-            label: "4. Dernier numéro"
+            label: "5. Dernier numéro"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
@@ -144,7 +163,7 @@ collections:
 
           # --- OÙ NOUS RETROUVER ---
           - name: "trouver"
-            label: "5. Points de vente"
+            label: "6. Points de vente"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
@@ -166,7 +185,7 @@ collections:
 
           # --- QUI SOMMES-NOUS ---
           - name: "qui"
-            label: "6. Qui sommes-nous"
+            label: "7. Qui sommes-nous"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
