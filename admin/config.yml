@@ -4,6 +4,7 @@ backend:
   name: github
   repo: cause-toujours/cause-toujours.github.io
   branch: main
+  base_url: https://sveltia-cms-auth.basile-mart.workers.dev
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
