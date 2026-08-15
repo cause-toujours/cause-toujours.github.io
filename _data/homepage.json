@@ -125,7 +125,7 @@
     "engagement_title": "PRENDRE LA PLUME",
     "engagement_text": "Vous écrivez, dessinez, photographiez\u00a0? Contribuez au prochain numéro.",
     "engagement_button_text": "ÉCRIRE À LA RÉDAC →",
-    "engagement_button_link": "mailto:redaction@causetoujours.fr?subject=Contribution%20au%20prochain%20num%C3%A9ro&body=Type%20de%20contribution%20%3A%0A%0AMon%20texte%20%3A%0A%0A"
+    "engagement_email": "redaction@montpelliercausecommune.org"
   },
   "trouver": {
     "section_num": "05",

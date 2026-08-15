@@ -406,6 +406,16 @@ ul { list-style: none; }
 .engagement-banner .block-title { margin-bottom: 0; flex-shrink: 0; }
 .engagement-banner p { flex: 1; min-width: 220px; margin-bottom: 0; font-size: 0.95rem; }
 .engagement-banner .btn-outline { flex-shrink: 0; }
+.engagement-banner .engagement-email {
+  flex-basis: 100%;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+.engagement-banner .engagement-email:hover { opacity: 1; }
 @media (max-width: 768px) {
   .engagement-banner { flex-direction: column; align-items: flex-start; transform: none; }
   .engagement-banner p { width: 100%; }

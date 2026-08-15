@@ -159,7 +159,7 @@ collections:
               - { name: "engagement_title", label: "Titre engagement", hint: "Titre du bloc 'Prendre la plume'", widget: "string" }
               - { name: "engagement_text", label: "Texte engagement", hint: "Invitation à contribuer", widget: "markdown" }
               - { name: "engagement_button_text", label: "Bouton engagement — texte", widget: "string" }
-              - { name: "engagement_button_link", label: "Bouton engagement — lien", hint: "Adresse email (ex: mailto:contact@causetoujours.fr)", widget: "string" }
+              - { name: "engagement_email", label: "Adresse email rédaction", hint: "Adresse qui s'ouvre dans le logiciel de mail quand on clique sur 'Écrire à la rédaction' (ex: redaction@montpelliercausecommune.org)", widget: "string" }
 
           # --- OÙ NOUS RETROUVER ---
           - name: "trouver"

@@ -191,7 +191,8 @@
     <div class="engagement-block engagement-banner">
       <h3 class="block-title">{{ homepage.numero.engagement_title }}</h3>
       <p>{{ homepage.numero.engagement_text | safe }}</p>
-      <a href="{{ homepage.numero.engagement_button_link }}" class="btn-outline">{{ homepage.numero.engagement_button_text }}</a>
+      <a href="mailto:{{ homepage.numero.engagement_email }}?subject=Contribution%20au%20prochain%20num%C3%A9ro&body=Type%20de%20contribution%20%3A%0A%0AMon%20texte%20%3A%0A%0A" class="btn-outline">{{ homepage.numero.engagement_button_text }}</a>
+      <a href="mailto:{{ homepage.numero.engagement_email }}" class="engagement-email">{{ homepage.numero.engagement_email }}</a>
     </div>
 
     <div class="numero-grid">
