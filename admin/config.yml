@@ -212,7 +212,7 @@ collections:
 
           # --- FOOTER ---
           - name: "footer"
-            label: "7. Pied de page"
+            label: "8. Pied de page"
             widget: "object"
             summary: "{{fields.logo}}"
             fields:
