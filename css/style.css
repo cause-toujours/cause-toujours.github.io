@@ -349,6 +349,10 @@ ul { list-style: none; }
 }
 .preview-image { border: var(--border-4); box-shadow: var(--shadow); overflow: hidden; }
 .preview-image img { width: 100%; display: block; }
+.preview-caption {
+  font-family: var(--font-sec); font-size: 0.72rem; letter-spacing: 1px;
+  text-transform: uppercase; text-align: center; padding-top: 14px; opacity: 0.65;
+}
 .preview-poster-tag { font-family: var(--font-sec); font-size: 0.55rem; letter-spacing: 2px; text-transform: uppercase; text-align: center; padding-top: 12px; opacity: 0.5; }
 .numero-right { display: flex; flex-direction: column; gap: 24px; }
 .poster-card {
@@ -387,39 +391,116 @@ ul { list-style: none; }
 .jeux-content p { font-size: 0.95rem; font-style: italic; }
 .engagement-block { background: var(--cream-dark); border: var(--border-2); box-shadow: var(--shadow-sm); padding: 24px; }
 .block-title { font-family: var(--font-narrow); font-weight: 700; font-style: italic; font-size: 1.3rem; text-transform: uppercase; margin-bottom: 8px; }
+
+/* --- MINI ÉDITO (le dernier numéro) --- */
+.mini-edito {
+  max-width: 760px;
+  margin: 48px auto 0;
+  background: var(--cream-dark);
+  border: var(--border-2);
+  box-shadow: var(--shadow-sm);
+  padding: 24px 28px;
+}
+.mini-edito .block-title { margin-bottom: 8px; }
+.mini-edito p { font-size: 0.95rem; }
+.mini-edito p.dropcap::first-letter {
+  font-family: var(--font-narrow); font-weight: 700; font-size: 3em;
+  line-height: 0.8; float: left; margin: 0 6px 0 0; color: var(--rouge);
+}
+.mini-edito-outro {
+  margin-top: 14px !important;
+  font-family: var(--font-sec); font-size: 0.72rem !important; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--rouge); font-weight: 600;
+}
+
+/* --- NUMÉRO : rangée 3 (mots croisés + Instagram) --- */
+.numero-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 48px;
+}
+.numero-duo .crossword-block { margin-top: 0; align-self: start; }
+.numero-duo .crossword-reveal { max-width: none; }
+.numero-duo .ig-clip { margin-top: 0; width: 100%; }
+.numero-duo .ig-clip-body { grid-template-columns: minmax(0, 1fr); }
+.numero-duo .ig-clip-media { width: 100%; }
+.numero-duo .ig-clip-media .ig-carousel-frame img { height: auto; max-height: 52vh; width: 100%; max-width: 100%; }
+
 .block-title-light { font-family: var(--font-narrow); font-weight: 700; font-style: italic; font-size: 1.3rem; text-transform: uppercase; margin-bottom: 8px; color: var(--noir); }
 .engagement-block p { font-size: 0.9rem; margin-bottom: 16px; }
 
-/* Banderole "Prendre la plume" — pleine largeur en haut de la section 03 */
-.engagement-banner {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
+/* Encart "Prendre la plume" — discret, à droite du titre de la section 03 */
+.engagement-mini {
+  margin-left: auto;
+  max-width: 340px;
+  padding: 12px 16px 14px;
+  border: var(--border-2);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.85rem;
+}
+.engagement-mini .block-title { font-size: 1rem; margin-bottom: 4px; }
+.engagement-mini p { font-size: 0.82rem; margin-bottom: 8px; }
+.engagement-mini .btn-outline { display: inline-block; padding: 6px 12px; font-size: 0.78rem; }
+@media (max-width: 768px) {
+  .engagement-mini { margin-left: 0; max-width: 100%; }
+}
+
+/* --- MOTS CROISÉS : réponse floutée à révéler --- */
+.crossword-block {
+  margin-top: 40px;
   background: var(--cream-dark);
   border: var(--border-4);
   box-shadow: var(--shadow);
-  padding: 22px 28px;
-  margin-bottom: 40px;
-  transform: rotate(-0.3deg);
+  padding: 18px 24px 24px;
+  transform: rotate(0.3deg);
 }
-.engagement-banner .block-title { margin-bottom: 0; flex-shrink: 0; }
-.engagement-banner p { flex: 1; min-width: 220px; margin-bottom: 0; font-size: 0.95rem; }
-.engagement-banner .btn-outline { flex-shrink: 0; }
-.engagement-banner .engagement-email {
-  flex-basis: 100%;
-  margin-top: 4px;
-  font-size: 0.8rem;
-  opacity: 0.6;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-underline-offset: 3px;
+.crossword-block .block-title { margin-bottom: 4px; }
+.crossword-intro { font-size: 0.9rem; opacity: 0.7; margin-bottom: 16px; }
+.crossword-reveal {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto;
+  border: var(--border-2);
+  overflow: hidden;
+  background: var(--white);
 }
-.engagement-banner .engagement-email:hover { opacity: 1; }
-@media (max-width: 768px) {
-  .engagement-banner { flex-direction: column; align-items: flex-start; transform: none; }
-  .engagement-banner p { width: 100%; }
+.crossword-reveal img {
+  display: block;
+  width: 100%;
+  filter: blur(18px) saturate(0.85);
+  transform: scale(1.06);
+  transition: filter 0.45s ease, transform 0.45s ease;
 }
+.crossword-reveal.revealed img { filter: none; transform: none; }
+.crossword-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 239, 230, 0.25);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.crossword-overlay .crossword-btn {
+  font-family: var(--font-narrow);
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--rouge);
+  color: var(--white);
+  border: var(--border-2);
+  box-shadow: var(--shadow-sm);
+  padding: 10px 18px;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.crossword-overlay:hover .crossword-btn { transform: translate(-2px, -2px); box-shadow: var(--shadow); }
+.crossword-reveal.revealed .crossword-overlay { display: none; }
 
 /* --- OÙ NOUS RETROUVER --- */
 .trouver-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
@@ -454,7 +535,7 @@ ul { list-style: none; }
 .qui-text em { color: var(--rouge); }
 .qui-text strong { font-weight: 600; color: var(--noir); }
 .qui-right { display: flex; flex-direction: column; gap: 20px; }
-.qui-card { background: var(--white); border: 2px solid var(--noir); padding: 24px; }
+.qui-card { background: var(--cream-light); border: var(--border-2); box-shadow: var(--shadow-sm); padding: 24px; }
 .qui-card p { font-size: 0.9rem; margin-bottom: 16px; color: var(--noir); opacity: 0.8; }
 .cc-link {
   display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 20px;
@@ -492,7 +573,7 @@ ul { list-style: none; }
   .hd-nav { display: none; }
   .kraft-bar { font-size: 0.5rem; gap: 6px; overflow: hidden; white-space: nowrap; padding: 6px 16px; }
   .kraft-dot { display: none; }
-  .hero-grid, .manifeste-layout, .numero-grid, .trouver-grid, .qui-grid { grid-template-columns: 1fr; }
+  .hero-grid, .manifeste-layout, .numero-grid, .numero-duo, .trouver-grid, .qui-grid { grid-template-columns: 1fr; }
   .formules { grid-template-columns: 1fr; }
   .formule-pick { transform: none; }
   .formule-pick:hover { transform: translate(-3px,-3px); }

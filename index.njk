@@ -81,9 +81,9 @@
         <span class="brand-dateline">Montpellier <span class="sep">·</span> <em>{{ homepage.hero.dateline_date }}</em> <span class="sep">·</span> {{ homepage.hero.dateline_num }}</span>
       </a>
       <nav class="hd-nav">
+        <a href="#manifeste">Manifeste</a>
         <a href="#soutenir">Soutenir</a>
         <a href="#numero">Numéro</a>
-        <a href="#manifeste">Manifeste</a>
         <a href="#trouver">Trouver</a>
       </nav>
       <a href="#soutenir" class="btn-hd">S'ABONNER →</a>
@@ -125,19 +125,34 @@
     </div>
   </section>
 
-  <!-- === PRÉSENTATION === -->
-  <section class="section" id="presentation">
+  <!-- === MANIFESTE === -->
+  <section class="section" id="manifeste">
     <div class="sec-head">
-      <span class="sec-num">{{ homepage.presentation.section_num }}</span>
-      <h2 class="sec-title">{{ homepage.presentation.section_title_1 }}<br>{{ homepage.presentation.section_title_2 }}</h2>
-      <span class="sec-tag">{{ homepage.presentation.section_tag }}</span>
+      <span class="sec-num">{{ homepage.manifeste.section_num }}</span>
+      <h2 class="sec-title">{{ homepage.manifeste.section_title_1 }}<br>{{ homepage.manifeste.section_title_2 | safe }}</h2>
+      <span class="sec-tag">{{ homepage.manifeste.section_tag }}</span>
     </div>
 
-    <div class="manifeste-main">
-      <p class="dropcap">{{ homepage.presentation.intro | safe }}</p>
-      {% for para in homepage.presentation.paragraphs %}
-      <p>{{ para | safe }}</p>
-      {% endfor %}
+    <div class="manifeste-layout">
+      <div class="manifeste-main">
+        <p class="dropcap">{{ homepage.manifeste.dropcap | safe }}</p>
+        {% for para in homepage.manifeste.paragraphs %}
+        <p>{{ para | safe }}</p>
+        {% endfor %}
+      </div>
+
+      <aside class="manifeste-aside">
+        <div class="tape tape-accent">
+          <span>{{ homepage.manifeste.aside_label }}</span>
+        </div>
+        <div class="aside-body">
+          <p>{{ homepage.manifeste.aside_text }}</p>
+          <a href="{{ homepage.manifeste.aside_link_url }}" target="_blank" class="link-block">{{ homepage.manifeste.aside_link_text }}</a>
+        </div>
+        <div class="manifeste-pull">
+          <p><strong>{{ homepage.manifeste.pull_quote | safe }}</strong></p>
+        </div>
+      </aside>
     </div>
   </section>
 
@@ -185,14 +200,6 @@
     <div class="sec-head">
       <span class="sec-num">{{ homepage.numero.section_num }}</span>
       <h2 class="sec-title">{{ homepage.numero.section_title_1 }}<br>{{ homepage.numero.section_title_2 }}</h2>
-      {% if homepage.numero.section_tag %}<span class="sec-tag">{{ homepage.numero.section_tag }}</span>{% endif %}
-    </div>
-
-    <div class="engagement-block engagement-banner">
-      <h3 class="block-title">{{ homepage.numero.engagement_title }}</h3>
-      <p>{{ homepage.numero.engagement_text | safe }}</p>
-      <a href="mailto:{{ homepage.numero.engagement_email }}?subject=Contribution%20au%20prochain%20num%C3%A9ro&body=Type%20de%20contribution%20%3A%0A%0AMon%20texte%20%3A%0A%0A" class="btn-outline">{{ homepage.numero.engagement_button_text }}</a>
-      <a href="mailto:{{ homepage.numero.engagement_email }}" class="engagement-email">{{ homepage.numero.engagement_email }}</a>
     </div>
 
     <div class="numero-grid">
@@ -203,6 +210,9 @@
             <img src="{{ homepage.numero.preview_image }}" alt="{{ homepage.numero.preview_image_alt }}">
           </div>
         </div>
+        {% if homepage.numero.section_tag %}
+        <p class="preview-caption">{{ homepage.numero.section_tag }}</p>
+        {% endif %}
       </div>
 
       <div class="numero-right">
@@ -218,36 +228,62 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- === MANIFESTE === -->
-  <section class="section" id="manifeste">
-    <div class="sec-head">
-      <span class="sec-num">{{ homepage.manifeste.section_num }}</span>
-      <h2 class="sec-title">{{ homepage.manifeste.section_title_1 }}<br>{{ homepage.manifeste.section_title_2 | safe }}</h2>
-      <span class="sec-tag">{{ homepage.manifeste.section_tag }}</span>
+    <div class="mini-edito">
+      <h3 class="block-title">{{ homepage.numero.mini_edito_label }}</h3>
+      <p class="dropcap">{{ homepage.numero.mini_edito_intro | safe }}</p>
+      {% for para in homepage.numero.mini_edito_paragraphs %}
+      <p>{{ para | safe }}</p>
+      {% endfor %}
+      <p class="mini-edito-outro">{{ homepage.numero.mini_edito_outro }}</p>
     </div>
 
-    <div class="manifeste-layout">
-      <div class="manifeste-main">
-        <p class="dropcap">{{ homepage.manifeste.dropcap | safe }}</p>
-        {% for para in homepage.manifeste.paragraphs %}
-        <p>{{ para | safe }}</p>
-        {% endfor %}
+    <div class="numero-duo">
+      {% if homepage.numero.crossword_image %}
+      <div class="crossword-block">
+        <h3 class="block-title">{{ homepage.numero.crossword_title }}</h3>
+        <p class="crossword-intro">{{ homepage.numero.crossword_intro }}</p>
+        <div class="crossword-reveal">
+          <img src="{{ homepage.numero.crossword_image }}" alt="{{ homepage.numero.crossword_image_alt }}" loading="lazy">
+          <button class="crossword-overlay" type="button" aria-pressed="false">
+            <span class="crossword-btn">{{ homepage.numero.crossword_reveal_text }}</span>
+          </button>
+        </div>
       </div>
+      {% endif %}
 
-      <aside class="manifeste-aside">
-        <div class="tape tape-accent">
-          <span>{{ homepage.manifeste.aside_label }}</span>
+      <div class="ig-clip" id="ig-clip" data-override-id="{{ homepage.numero.ig_override_post_id | default('', true) }}">
+        <div class="ig-clip-tape">
+          <span>{{ homepage.numero.ig_tape_label }}</span>
+          <span id="ig-clip-date"></span>
         </div>
-        <div class="aside-body">
-          <p>{{ homepage.manifeste.aside_text }}</p>
-          <a href="{{ homepage.manifeste.aside_link_url }}" target="_blank" class="link-block">{{ homepage.manifeste.aside_link_text }}</a>
+
+        <div class="ig-clip-body">
+          <div class="ig-clip-text">
+            <p id="ig-post-caption" class="ig-clip-caption"></p>
+            <a id="ig-post-link" href="#" target="_blank" rel="noopener noreferrer" class="ig-clip-permalink">
+              Voir sur Instagram <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="ig-clip-media">
+            <div class="ig-carousel" id="ig-carousel" aria-roledescription="carousel">
+              <button class="ig-carousel-nav ig-carousel-prev" id="ig-carousel-prev" type="button" aria-label="Image précédente" hidden>
+                <span aria-hidden="true">‹</span>
+              </button>
+              <div class="ig-carousel-frame">
+                <img id="ig-post-image" src="" alt="" loading="lazy" />
+              </div>
+              <button class="ig-carousel-nav ig-carousel-next" id="ig-carousel-next" type="button" aria-label="Image suivante" hidden>
+                <span aria-hidden="true">›</span>
+              </button>
+              <div class="ig-carousel-counter" id="ig-carousel-counter" hidden></div>
+            </div>
+          </div>
         </div>
-        <div class="manifeste-pull">
-          <p><strong>{{ homepage.manifeste.pull_quote | safe }}</strong></p>
-        </div>
-      </aside>
+
+        <p class="ig-clip-intro">{{ homepage.numero.ig_intro }}</p>
+      </div>
     </div>
   </section>
 
@@ -295,45 +331,18 @@
 
       <div class="qui-right">
         <div class="qui-card">
+          <h3 class="block-title-light">{{ homepage.qui.engagement_title }}</h3>
+          <p>{{ homepage.qui.engagement_text | safe }}</p>
+          <a href="mailto:{{ homepage.qui.engagement_email }}?subject=Contribution%20au%20prochain%20num%C3%A9ro&body=Type%20de%20contribution%20%3A%0A%0AMon%20texte%20%3A%0A%0A" class="btn-outline">{{ homepage.qui.engagement_button_text }}</a>
+        </div>
+
+        <div class="qui-card">
           <h3 class="block-title-light">{{ homepage.qui.social_title }}</h3>
           <p>{{ homepage.qui.social_text | safe }}</p>
           <a href="{{ homepage.qui.social_link_url }}" target="_blank" class="btn-outline">{{ homepage.qui.social_link_text }}</a>
         </div>
 
       </div>
-    </div>
-
-    <div class="ig-clip" id="ig-clip" data-override-id="{{ homepage.qui.ig_override_post_id | default('', true) }}">
-      <div class="ig-clip-tape">
-        <span>{{ homepage.qui.ig_tape_label }}</span>
-        <span id="ig-clip-date"></span>
-      </div>
-
-      <div class="ig-clip-body">
-        <div class="ig-clip-text">
-          <p id="ig-post-caption" class="ig-clip-caption"></p>
-          <a id="ig-post-link" href="#" target="_blank" rel="noopener noreferrer" class="ig-clip-permalink">
-            Voir sur Instagram <span aria-hidden="true">→</span>
-          </a>
-        </div>
-
-        <div class="ig-clip-media">
-          <div class="ig-carousel" id="ig-carousel" aria-roledescription="carousel">
-            <button class="ig-carousel-nav ig-carousel-prev" id="ig-carousel-prev" type="button" aria-label="Image précédente" hidden>
-              <span aria-hidden="true">‹</span>
-            </button>
-            <div class="ig-carousel-frame">
-              <img id="ig-post-image" src="" alt="" loading="lazy" />
-            </div>
-            <button class="ig-carousel-nav ig-carousel-next" id="ig-carousel-next" type="button" aria-label="Image suivante" hidden>
-              <span aria-hidden="true">›</span>
-            </button>
-            <div class="ig-carousel-counter" id="ig-carousel-counter" hidden></div>
-          </div>
-        </div>
-      </div>
-
-      <p class="ig-clip-intro">{{ homepage.qui.ig_intro }}</p>
     </div>
 
   </section>
@@ -364,6 +373,7 @@
 
   <!-- === INSTAGRAM FEED === -->
   <script src="js/instagram-feed.js" defer></script>
+  <script src="js/crossword-reveal.js" defer></script>
   <!-- crossword.js — commenté pour le N°001, réactivé pour les prochains numéros -->
   <!-- <script src="js/crossword.js" defer></script> -->
 

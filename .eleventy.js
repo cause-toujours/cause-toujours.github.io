@@ -8,6 +8,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("versions");
   eleventyConfig.addPassthroughCopy("journal-cover.png");
   eleventyConfig.addPassthroughCopy("journal-page3.png");
+  eleventyConfig.addPassthroughCopy("une-n001.png");
+  eleventyConfig.addPassthroughCopy("une-hero.png");
+  eleventyConfig.addPassthroughCopy("mots-croises-n001.jpeg");
   eleventyConfig.addPassthroughCopy("poster-a2.jpg");
   eleventyConfig.addPassthroughCopy("poster-a2-n001.png");
   eleventyConfig.addPassthroughCopy("logo-cc.png");

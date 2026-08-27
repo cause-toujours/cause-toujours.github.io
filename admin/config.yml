@@ -60,28 +60,9 @@ collections:
               - { name: "cover_image", label: "Image de couverture", hint: "Nom du fichier image (ex: journal-cover.png)", widget: "string" }
               - { name: "cover_alt", label: "Description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string" }
 
-          # --- ÉDITO / PRÉSENTATION ---
-          - name: "presentation"
-            label: "2. Édito"
-            widget: "object"
-            summary: "{{fields.section_title_1}}"
-            fields:
-              - { name: "section_num", label: "Numéro de section", widget: "string" }
-              - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
-              - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
-              - { name: "section_tag", label: "Étiquette", hint: "Petit texte à côté du titre", widget: "string" }
-              - { name: "intro", label: "Paragraphe d'ouverture", hint: "Le premier paragraphe de l'édito, avec la grande lettrine. Vous pouvez utiliser du gras/italique.", widget: "markdown" }
-              - name: "paragraphs"
-                label: "Paragraphes de l'édito"
-                hint: "Ajoutez, supprimez ou réordonnez les paragraphes"
-                widget: "list"
-                minimize_collapsed: true
-                summary: "{{fields.text}}"
-                field: { name: "text", label: "Paragraphe", widget: "markdown" }
-
           # --- MANIFESTE ---
           - name: "manifeste"
-            label: "3. Manifeste"
+            label: "1. Manifeste"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
@@ -105,7 +86,7 @@ collections:
 
           # --- SOUTENIR ---
           - name: "soutenir"
-            label: "4. Soutenir (abonnements & dons)"
+            label: "2. Soutenir (abonnements & dons)"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
@@ -144,26 +125,40 @@ collections:
 
           # --- DERNIER NUMÉRO ---
           - name: "numero"
-            label: "5. Dernier numéro"
+            label: "3. Dernier numéro"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
               - { name: "section_num", label: "Numéro de section", widget: "string" }
               - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
               - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
-              - { name: "section_tag", label: "Étiquette", widget: "string" }
+              - { name: "section_tag", label: "Étiquette", hint: "Texte affiché sous l'image de la Une (ex: Tous les 2 mois, une thématique passée au crible)", widget: "string" }
               - { name: "preview_tape", label: "Étiquette aperçu", hint: "Texte sur l'aperçu de la Une", widget: "string" }
               - { name: "preview_image", label: "Image aperçu", hint: "Nom du fichier image (ex: journal-page3.png)", widget: "string" }
               - { name: "preview_image_alt", label: "Description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string" }
+              - { name: "mini_edito_label", label: "Mini édito — titre de l'encart", hint: "Texte en haut de l'édito réduit (ex: MINI ÉDITO · N°001)", widget: "string" }
+              - { name: "mini_edito_intro", label: "Mini édito — paragraphe d'ouverture", hint: "Le premier paragraphe de l'édito, avec la grande lettrine. Vous pouvez utiliser du gras/italique.", widget: "markdown" }
+              - name: "mini_edito_paragraphs"
+                label: "Mini édito — paragraphes"
+                hint: "Ajoutez, supprimez ou réordonnez les paragraphes"
+                widget: "list"
+                minimize_collapsed: true
+                summary: "{{fields.text}}"
+                field: { name: "text", label: "Paragraphe", widget: "markdown" }
+              - { name: "mini_edito_outro", label: "Mini édito — phrase de sortie", hint: "Invitation vers le papier (ex: À découvrir en version longue dans le dernier numéro papier de Cause Toujours !)", widget: "string" }
               - { name: "poster_tag", label: "Étiquette poster", widget: "string" }
-              - { name: "engagement_title", label: "Titre engagement", hint: "Titre du bloc 'Prendre la plume'", widget: "string" }
-              - { name: "engagement_text", label: "Texte engagement", hint: "Invitation à contribuer", widget: "markdown" }
-              - { name: "engagement_button_text", label: "Bouton engagement — texte", widget: "string" }
-              - { name: "engagement_email", label: "Adresse email rédaction", hint: "Adresse qui s'ouvre dans le logiciel de mail quand on clique sur 'Écrire à la rédaction' (ex: redaction@montpelliercausecommune.org)", widget: "string" }
+              - { name: "crossword_title", label: "Mots croisés — titre de l'encart", hint: "Titre de l'encart réponse (ex: MOTS CROISÉS · N°001). Laisser l'image vide pour masquer tout l'encart.", widget: "string", required: false }
+              - { name: "crossword_intro", label: "Mots croisés — phrase d'intro", hint: "Petite phrase au-dessus de l'image (ex: Tu as joué dans le #1 ? Vérifie tes réponses.)", widget: "string", required: false }
+              - { name: "crossword_image", label: "Mots croisés — image de la solution", hint: "Nom du fichier image (ex: mots-croises-n001.jpeg). Laisser vide pour masquer l'encart.", widget: "string", required: false }
+              - { name: "crossword_image_alt", label: "Mots croisés — description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string", required: false }
+              - { name: "crossword_reveal_text", label: "Mots croisés — texte du bouton", hint: "Message affiché sur l'image floutée (ex: Cliquez pour révéler la réponse)", widget: "string", required: false }
+              - { name: "ig_tape_label", label: "Étiquette ruban Instagram", hint: "Texte du ruban kraft au-dessus du dernier post (ex: DERNIER POST · INSTAGRAM)", widget: "string" }
+              - { name: "ig_override_post_id", label: "Forcer un post spécifique (ID)", hint: "Laissez vide pour le dernier post automatique. Pour forcer un post, collez son ID Instagram (ex: 17936214747339836). L'ID s'affiche dans data/instagram.json après chaque sync.", widget: "string" }
+              - { name: "ig_intro", label: "Texte sous le post Instagram", hint: "Petite phrase sous l'aperçu du dernier post", widget: "text" }
 
           # --- OÙ NOUS RETROUVER ---
           - name: "trouver"
-            label: "6. Points de vente"
+            label: "4. Points de vente"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
@@ -185,7 +180,7 @@ collections:
 
           # --- QUI SOMMES-NOUS ---
           - name: "qui"
-            label: "7. Qui sommes-nous"
+            label: "5. Qui sommes-nous"
             widget: "object"
             summary: "{{fields.section_title_1}}"
             fields:
@@ -203,9 +198,10 @@ collections:
               - { name: "social_text", label: "Texte réseaux sociaux", widget: "markdown" }
               - { name: "social_link_text", label: "Lien réseau — texte", widget: "string" }
               - { name: "social_link_url", label: "Lien réseau — URL", widget: "string" }
-              - { name: "ig_tape_label", label: "Étiquette ruban Instagram", hint: "Texte du ruban kraft au-dessus du dernier post (ex: DERNIER POST · INSTAGRAM)", widget: "string" }
-              - { name: "ig_override_post_id", label: "Forcer un post spécifique (ID)", hint: "Laissez vide pour le dernier post automatique. Pour forcer un post, collez son ID Instagram (ex: 17936214747339836). L'ID s'affiche dans data/instagram.json après chaque sync.", widget: "string" }
-              - { name: "ig_intro", label: "Texte sous le post Instagram", hint: "Petite phrase sous l'aperçu du dernier post", widget: "text" }
+              - { name: "engagement_title", label: "Titre engagement", hint: "Titre du bloc 'Prendre la plume' (ex: PRENDRE LA PLUME)", widget: "string" }
+              - { name: "engagement_text", label: "Texte engagement", hint: "Invitation à contribuer", widget: "markdown" }
+              - { name: "engagement_button_text", label: "Bouton engagement — texte", widget: "string" }
+              - { name: "engagement_email", label: "Adresse email rédaction", hint: "Adresse qui s'ouvre dans le logiciel de mail quand on clique sur 'Écrire à la rédaction' (ex: redaction@montpelliercausecommune.org)", widget: "string" }
               - { name: "cc_label", label: "Étiquette Cause Commune", widget: "string" }
               - { name: "cc_name", label: "Nom Cause Commune", widget: "string" }
               - { name: "cc_detail", label: "Détail Cause Commune", widget: "string" }

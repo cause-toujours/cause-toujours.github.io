@@ -14,11 +14,20 @@
     "cta_secondary_text": "Voir le dernier numéro",
     "cta_secondary_link": "#numero",
     "scroll_text": "↓ défile, on a écrit des trucs",
-    "badge_lines": ["PREMIER", "NUMÉRO", "SEPT 2026"],
-    "dateline_date": "Septembre 2026",
+    "badge_lines": [
+      "PREMIER",
+      "NUMÉRO",
+      "SEPT-OCT 2026"
+    ],
+    "dateline_date": "Septembre-octobre 2026",
     "dateline_num": "N°001",
-    "kraft_bar": ["TIRAGE LIMITÉ", "100% BÉNÉVOLE", "SANS PUB", "SANS MILLIARDAIRE"],
-    "cover_image": "journal-cover.png",
+    "kraft_bar": [
+      "TIRAGE LIMITÉ",
+      "100% BÉNÉVOLE",
+      "SANS PUB",
+      "SANS MILLIARDAIRE"
+    ],
+    "cover_image": "une-hero.png",
     "cover_alt": "Une du N°001 — Cause Toujours !"
   },
   "presentation": {
@@ -33,9 +42,9 @@
     ]
   },
   "manifeste": {
-    "section_num": "04",
+    "section_num": "01",
     "section_title_1": "POURQUOI",
-    "section_title_2": "UN MÉDIA\u00a0?",
+    "section_title_2": "UN MÉDIA ?",
     "section_tag": "MINI-MANIFESTE",
     "dropcap": "La presse locale est morte. <em>Midi Libre</em> appartient à des milliardaires, la com' institutionnelle noie l'information sous les communiqués. Il manque une voix libre, indépendante, qui ne rend de comptes qu'à ses lecteurs.",
     "paragraphs": [
@@ -52,7 +61,7 @@
   "soutenir": {
     "section_num": "02",
     "section_title_1": "SOUTENIR",
-    "section_title_2": "CAUSE TOUJOURS\u00a0!",
+    "section_title_2": "CAUSE TOUJOURS !",
     "section_tag": "ABONNEMENTS & DONS",
     "formules": [
       {
@@ -96,12 +105,24 @@
         "flag": ""
       }
     ],
-    "transparency_title": "OÙ VA VOTRE ARGENT\u00a0?",
+    "transparency_title": "OÙ VA VOTRE ARGENT ?",
     "transparency_bars": [
-      { "pct": "55%", "label": "Impression papier" },
-      { "pct": "20%", "label": "Artistes locaux (poster A2)" },
-      { "pct": "15%", "label": "Distribution & logistique" },
-      { "pct": "10%", "label": "Fonctionnement" }
+      {
+        "pct": "55%",
+        "label": "Impression papier"
+      },
+      {
+        "pct": "20%",
+        "label": "Artistes locaux (poster A2)"
+      },
+      {
+        "pct": "15%",
+        "label": "Distribution & logistique"
+      },
+      {
+        "pct": "10%",
+        "label": "Fonctionnement"
+      }
     ],
     "transparency_note": "<strong>0 € dans la poche d'actionnaires.</strong> Tout est réinvesti dans le prochain numéro.",
     "adresse_label": "📬 ABONNÉS PAPIER",
@@ -111,39 +132,78 @@
     "section_num": "03",
     "section_title_1": "LE DERNIER",
     "section_title_2": "NUMÉRO",
-    "section_tag": "",
+    "section_tag": "Tous les 2 mois, une thématique passée au crible",
     "preview_tape": "UNE DU N°001",
-    "preview_image": "journal-page3.png",
-    "preview_image_alt": "Page intérieure du N°001 — Cause Toujours !",
+    "preview_image": "une-n001.png",
+    "preview_image_alt": "Une du N°001 — Cause Toujours !",
     "poster_tag": "",
     "poster_tape": "POSTER A2 · N°001",
     "poster_image": "poster-a2-n001.png",
     "poster_image_alt": "Poster A2 du N°001 par STBF — Cause Toujours !",
-    "poster_caption": "Chaque numéro inclut un poster A2 signé par un artiste local.",
+    "poster_caption": "Chaque numéro inclut un poster A2 signé par un·e artiste engagé·e.",
     "poster_artist": "STBF",
     "poster_artist_url": "https://www.instagram.com/stbf97/",
-    "engagement_title": "PRENDRE LA PLUME",
-    "engagement_text": "Vous écrivez, dessinez, photographiez\u00a0? Contribuez au prochain numéro.",
-    "engagement_button_text": "ÉCRIRE À LA RÉDAC →",
-    "engagement_email": "redaction@montpelliercausecommune.org"
+    "crossword_title": "MOTS CROISÉS · N°001",
+    "crossword_intro": "Tu as joué dans le #1 ? Vérifie tes réponses.",
+    "crossword_image": "mots-croises-n001.jpeg",
+    "crossword_image_alt": "Solution des mots croisés du N°001 — Cause Toujours !",
+    "crossword_reveal_text": "Cliquez pour révéler la réponse",
+    "mini_edito_label": "MINI ÉDITO · N°001",
+    "mini_edito_intro": "Et si c'était notre dernier été « normal » ? Canicules, méga-feux, rivières à sec : le futur annoncé par les scientifiques est déjà là. Pendant que la planète brûle, notre démocratie s'étouffe, fragilisée par la concentration des médias et l'affaiblissement de la presse indépendante. Pourtant, des milliers d'associations agissent chaque jour pour protéger le vivant, créer du lien et défendre les plus précaires.",
+    "mini_edito_paragraphs": [
+      "À Montpellier, les moyens manquent, tandis que la communication officielle, elle, ne connaît pas la crise. C'est pour renforcer le tissu associatif et pour une information libre, que naît Cause Toujours : un journal bénévole et indépendant, qui prend le temps d'enquêter, d'expliquer et de relier les combats écologiques, sociaux et démocratiques. Parce qu'une démocratie vivante a besoin de contrepouvoirs et de médias libres. Bonne lecture !",
+      "<em>Julia Mignacca</em> — Élue Cause Commune · Les Verts Populaires (Mairie & Métropole)"
+    ],
+    "mini_edito_outro": "À découvrir en version longue dans le dernier numéro papier de Cause Toujours !",
+    "ig_tape_label": "DERNIER POST · INSTAGRAM",
+    "ig_override_post_id": "",
+    "ig_intro": "On y poste les coulisses, les extraits et les annonces."
   },
   "trouver": {
-    "section_num": "05",
+    "section_num": "04",
     "section_title_1": "OÙ NOUS",
-    "section_title_2": "RETROUVER\u00a0?",
+    "section_title_2": "RETROUVER ?",
     "section_tag": "POINTS DE VENTE",
     "locations": [
-      { "num": "01", "name": "Le QG", "address": "2 Quai des Tanneurs, 34090 Montpellier", "lat": 43.6159, "lng": 3.8749, "color": "#C8302A" },
-      { "num": "02", "name": "Biocoop Garrigues", "address": "25 av. des Marris, Montpellier", "lat": 43.6085, "lng": 3.8729, "color": "#7BB89C" },
-      { "num": "03", "name": "Théâtre de la Plume", "address": "6 Rue Guillaume Pellicier, 34070 Montpellier", "lat": 43.6086, "lng": 3.8670, "color": "#D4A537" },
-      { "num": "04", "name": "Le Grain des Mots", "address": "2 cours Gambetta, Montpellier", "lat": 43.6055, "lng": 3.8745, "color": "#5B8BA0" }
+      {
+        "num": "01",
+        "name": "Le QG",
+        "address": "2 Quai des Tanneurs, 34090 Montpellier",
+        "lat": 43.6159,
+        "lng": 3.8749,
+        "color": "#C8302A"
+      },
+      {
+        "num": "02",
+        "name": "Biocoop Garrigues",
+        "address": "25 av. des Marris, Montpellier",
+        "lat": 43.6085,
+        "lng": 3.8729,
+        "color": "#7BB89C"
+      },
+      {
+        "num": "03",
+        "name": "Théâtre de la Plume",
+        "address": "6 Rue Guillaume Pellicier, 34070 Montpellier",
+        "lat": 43.6086,
+        "lng": 3.867,
+        "color": "#D4A537"
+      },
+      {
+        "num": "04",
+        "name": "Le Grain des Mots",
+        "address": "2 cours Gambetta, Montpellier",
+        "lat": 43.6055,
+        "lng": 3.8745,
+        "color": "#5B8BA0"
+      }
     ],
     "map_text": "Carte des points de vente<br>(à intégrer)"
   },
   "qui": {
-    "section_num": "06",
+    "section_num": "05",
     "section_title_1": "QUI",
-    "section_title_2": "SOMMES-NOUS\u00a0?",
+    "section_title_2": "SOMMES-NOUS ?",
     "section_tag": "L'ÉQUIPE",
     "paragraphs": [
       "<em>Cause Toujours !</em> est un collectif de bénévoles montpelliérains qui croit qu'une ville mérite un média qui lui ressemble : libre, impertinent, culturel, ancré.",
@@ -151,15 +211,16 @@
       "<em>Cause Toujours !</em> est porté par <strong>Cause Commune</strong>, un mouvement citoyen et démocratique engagé à Montpellier."
     ],
     "social_title": "SUIVEZ-NOUS",
-    "social_text": "Sur Instagram, via le compte de notre grande sœur\u00a0:",
+    "social_text": "Sur Instagram, via le compte de notre grande sœur :",
     "social_link_text": "@CAUSECOMMUNE.MTP →",
     "social_link_url": "https://www.instagram.com/causecommune.mtp/",
-      "ig_tape_label": "DERNIER POST · INSTAGRAM",
-      "ig_override_post_id": "",
-      "ig_intro": "On y poste les coulisses, les extraits et les annonces.",
     "cc_label": "UN PROJET DE LA FAMILLE",
     "cc_name": "CAUSE COMMUNE",
-    "cc_detail": "Parti politique · Montpellier"
+    "cc_detail": "Parti politique · Montpellier",
+    "engagement_title": "PRENDRE LA PLUME",
+    "engagement_text": "Vous écrivez, dessinez, photographiez ? Contribuez à un prochain numéro.",
+    "engagement_button_text": "ÉCRIRE À LA RÉDAC →",
+    "engagement_email": "redaction@montpelliercausecommune.org"
   },
   "footer": {
     "logo": "CAUSE TOUJOURS",
@@ -167,6 +228,10 @@
     "text": "Média local indépendant · Montpellier · 100% bénévole · Papier bimestriel",
     "cc_logo": "logo-cc.png",
     "cc_logo_alt": "Cause Commune Montpellier",
-    "bar_items": ["© 2026", "Fait avec de l'encre et du logiciel libre", "Sans pub, sans milliardaire, sans pardon"]
+    "bar_items": [
+      "© 2026",
+      "Fait avec de l'encre et du logiciel libre",
+      "Sans pub, sans milliardaire, avec amour"
+    ]
   }
 }
