@@ -30,17 +30,6 @@
     "cover_image": "une-hero.png",
     "cover_alt": "Une du N°001 — Cause Toujours !"
   },
-  "presentation": {
-    "section_num": "01",
-    "section_title_1": "ÉDITO",
-    "section_title_2": "DU N°001",
-    "section_tag": "ÉDITO",
-    "intro": "Et si c'était notre dernier été « normal » ? Canicules, méga-feux, rivières à sec : le futur annoncé par les scientifiques est déjà là. Pendant que la planète brûle, notre démocratie s'étouffe, fragilisée par la concentration des médias et l'affaiblissement de la presse indépendante. Pourtant, des milliers d'associations agissent chaque jour pour protéger le vivant, créer du lien et défendre les plus précaires.",
-    "paragraphs": [
-      "À Montpellier, les moyens manquent, tandis que la communication officielle, elle, ne connaît pas la crise. C'est pour renforcer le tissu associatif et pour une information libre, que naît Cause Toujours : un journal bénévole et indépendant, qui prend le temps d'enquêter, d'expliquer et de relier les combats écologiques, sociaux et démocratiques. Parce qu'une démocratie vivante a besoin de contrepouvoirs et de médias libres. Bonne lecture !",
-      "<em>Julia Mignacca</em> — Élue Cause Commune · Les Verts Populaires (Mairie & Métropole)"
-    ]
-  },
   "manifeste": {
     "section_num": "01",
     "section_title_1": "POURQUOI",
@@ -136,7 +125,6 @@
     "preview_tape": "UNE DU N°001",
     "preview_image": "une-n001.png",
     "preview_image_alt": "Une du N°001 — Cause Toujours !",
-    "poster_tag": "",
     "poster_tape": "POSTER A2 · N°001",
     "poster_image": "poster-a2-n001.png",
     "poster_image_alt": "Poster A2 du N°001 par STBF — Cause Toujours !",
@@ -197,8 +185,7 @@
         "lng": 3.8745,
         "color": "#5B8BA0"
       }
-    ],
-    "map_text": "Carte des points de vente<br>(à intégrer)"
+    ]
   },
   "qui": {
     "section_num": "05",

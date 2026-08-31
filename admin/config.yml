@@ -146,14 +146,19 @@ collections:
                 summary: "{{fields.text}}"
                 field: { name: "text", label: "Paragraphe", widget: "markdown" }
               - { name: "mini_edito_outro", label: "Mini édito — phrase de sortie", hint: "Invitation vers le papier (ex: À découvrir en version longue dans le dernier numéro papier de Cause Toujours !)", widget: "string" }
-              - { name: "poster_tag", label: "Étiquette poster", widget: "string" }
+              - { name: "poster_tape", label: "Affiche — ruban", hint: "Texte en haut de l'affiche poster (ex: POSTER A2 · N°001)", widget: "string" }
+              - { name: "poster_artist", label: "Affiche — nom de l'artiste", hint: "Ex: STBF", widget: "string" }
+              - { name: "poster_artist_url", label: "Affiche — lien de l'artiste", hint: "URL vers la page/l'insta de l'artiste (ex: https://www.instagram.com/stbf97/)", widget: "string" }
+              - { name: "poster_image", label: "Affiche — image", hint: "Nom du fichier image (ex: poster-a2-n001.png)", widget: "string" }
+              - { name: "poster_image_alt", label: "Affiche — description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string" }
+              - { name: "poster_caption", label: "Affiche — légende", hint: "Phrase sous l'affiche (ex: Chaque numéro inclut un poster A2 signé par un·e artiste engagé·e.)", widget: "text" }
               - { name: "crossword_title", label: "Mots croisés — titre de l'encart", hint: "Titre de l'encart réponse (ex: MOTS CROISÉS · N°001). Laisser l'image vide pour masquer tout l'encart.", widget: "string", required: false }
               - { name: "crossword_intro", label: "Mots croisés — phrase d'intro", hint: "Petite phrase au-dessus de l'image (ex: Tu as joué dans le #1 ? Vérifie tes réponses.)", widget: "string", required: false }
               - { name: "crossword_image", label: "Mots croisés — image de la solution", hint: "Nom du fichier image (ex: mots-croises-n001.jpeg). Laisser vide pour masquer l'encart.", widget: "string", required: false }
               - { name: "crossword_image_alt", label: "Mots croisés — description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string", required: false }
               - { name: "crossword_reveal_text", label: "Mots croisés — texte du bouton", hint: "Message affiché sur l'image floutée (ex: Cliquez pour révéler la réponse)", widget: "string", required: false }
               - { name: "ig_tape_label", label: "Étiquette ruban Instagram", hint: "Texte du ruban kraft au-dessus du dernier post (ex: DERNIER POST · INSTAGRAM)", widget: "string" }
-              - { name: "ig_override_post_id", label: "Forcer un post spécifique (ID)", hint: "Laissez vide pour le dernier post automatique. Pour forcer un post, collez son ID Instagram (ex: 17936214747339836). L'ID s'affiche dans data/instagram.json après chaque sync.", widget: "string" }
+              - { name: "ig_override_post_id", label: "Forcer un post spécifique (ID)", hint: "Laissez vide pour le dernier post automatique. Pour forcer un post, collez son ID Instagram (ex: 17936214747339836). L'ID s'affiche dans data/instagram.json après chaque sync.", widget: "string", required: false }
               - { name: "ig_intro", label: "Texte sous le post Instagram", hint: "Petite phrase sous l'aperçu du dernier post", widget: "text" }
 
           # --- OÙ NOUS RETROUVER ---
@@ -176,7 +181,9 @@ collections:
                   - { name: "num", label: "Numéro", widget: "string" }
                   - { name: "name", label: "Nom du lieu", widget: "string" }
                   - { name: "address", label: "Adresse", widget: "string" }
-              - { name: "map_text", label: "Texte carte", hint: "Texte affiché dans l'emplacement de la carte", widget: "text" }
+                  - { name: "lat", label: "Latitude", hint: "Coordonnée pour la carte (ex: 43.6159)", widget: "number" }
+                  - { name: "lng", label: "Longitude", hint: "Coordonnée pour la carte (ex: 3.8749)", widget: "number" }
+                  - { name: "color", label: "Couleur du marqueur", hint: "Code couleur hex (ex: #C8302A)", widget: "string" }
 
           # --- QUI SOMMES-NOUS ---
           - name: "qui"
@@ -215,6 +222,8 @@ collections:
               - { name: "logo", label: "Logo (texte)", widget: "string" }
               - { name: "logo_bang", label: "Bang", widget: "string" }
               - { name: "text", label: "Texte pied de page", widget: "string" }
+              - { name: "cc_logo", label: "Logo Cause Commune (fichier)", hint: "Nom du fichier image (ex: logo-cc.png)", widget: "string" }
+              - { name: "cc_logo_alt", label: "Logo Cause Commune — description", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string" }
               - name: "bar_items"
                 label: "Éléments de la barre"
                 hint: "Textes séparés par des points dans le pied de page"
