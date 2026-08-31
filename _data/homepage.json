@@ -98,20 +98,20 @@
     "transparency_title": "OÙ VA VOTRE ARGENT ?",
     "transparency_bars": [
       {
-        "pct": "60%",
+        "pct": "#1",
         "label": "Imprimeur local"
       },
       {
-        "pct": "25%",
+        "pct": "#2",
         "label": "Artistes (poster A2)"
       },
       {
-        "pct": "5%",
-        "label": "Distribution & logistique (matériel de distribution)"
+        "pct": "#3",
+        "label": "Distribution & logistique"
       },
       {
-        "pct": "10%",
-        "label": "Fonctionnement (outils informatiques)"
+        "pct": "#4",
+        "label": "Fonctionnement"
       }
     ],
     "transparency_note": "<strong>0 € dans la poche d'actionnaires (il n'y en a pas!).</strong> Tout l'argent collecté est utilisé pour produire et faire connaitre le média Cause Toujours!",
