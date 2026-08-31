@@ -1,4 +1,12 @@
+const MarkdownIt = require("markdown-it");
+const md = new MarkdownIt({ html: true });
+const { SafeString } = require("nunjucks").runtime;
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("markdownify", (content) =>
+    new SafeString(md.renderInline(content || ""))
+  );
+
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");

@@ -135,9 +135,9 @@
 
     <div class="manifeste-layout">
       <div class="manifeste-main">
-        <p class="dropcap">{{ homepage.manifeste.dropcap | safe }}</p>
+        <p class="dropcap">{{ homepage.manifeste.dropcap | markdownify }}</p>
         {% for para in homepage.manifeste.paragraphs %}
-        <p>{{ para | safe }}</p>
+        <p>{{ para | markdownify }}</p>
         {% endfor %}
       </div>
 
@@ -150,7 +150,7 @@
           <a href="{{ homepage.manifeste.aside_link_url }}" target="_blank" class="link-block">{{ homepage.manifeste.aside_link_text }}</a>
         </div>
         <div class="manifeste-pull">
-          <p><strong>{{ homepage.manifeste.pull_quote | safe }}</strong></p>
+          <p><strong>{{ homepage.manifeste.pull_quote | markdownify }}</strong></p>
         </div>
       </aside>
     </div>
@@ -186,7 +186,7 @@
         </div>
         {% endfor %}
       </div>
-      <p class="transp-note">{{ homepage.soutenir.transparency_note | safe }}</p>
+      <p class="transp-note">{{ homepage.soutenir.transparency_note | markdownify }}</p>
     </div>
 
     <div class="adresse-note">
@@ -231,9 +231,9 @@
 
     <div class="mini-edito">
       <h3 class="block-title">{{ homepage.numero.mini_edito_label }}</h3>
-      <p class="dropcap">{{ homepage.numero.mini_edito_intro | safe }}</p>
+      <p class="dropcap">{{ homepage.numero.mini_edito_intro | markdownify }}</p>
       {% for para in homepage.numero.mini_edito_paragraphs %}
-      <p>{{ para | safe }}</p>
+      <p>{{ para | markdownify }}</p>
       {% endfor %}
       <p class="mini-edito-outro">{{ homepage.numero.mini_edito_outro }}</p>
     </div>
@@ -325,20 +325,20 @@
     <div class="qui-grid">
       <div class="qui-text">
         {% for para in homepage.qui.paragraphs %}
-        <p>{{ para | safe }}</p>
+        <p>{{ para | markdownify }}</p>
         {% endfor %}
       </div>
 
       <div class="qui-right">
         <div class="qui-card">
           <h3 class="block-title-light">{{ homepage.qui.engagement_title }}</h3>
-          <p>{{ homepage.qui.engagement_text | safe }}</p>
+          <p>{{ homepage.qui.engagement_text | markdownify }}</p>
           <a href="mailto:{{ homepage.qui.engagement_email }}?subject=Contribution%20au%20prochain%20num%C3%A9ro&body=Type%20de%20contribution%20%3A%0A%0AMon%20texte%20%3A%0A%0A" class="btn-outline">{{ homepage.qui.engagement_button_text }}</a>
         </div>
 
         <div class="qui-card">
           <h3 class="block-title-light">{{ homepage.qui.social_title }}</h3>
-          <p>{{ homepage.qui.social_text | safe }}</p>
+          <p>{{ homepage.qui.social_text | markdownify }}</p>
           <a href="{{ homepage.qui.social_link_url }}" target="_blank" class="btn-outline">{{ homepage.qui.social_link_text }}</a>
         </div>
 
