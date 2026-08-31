@@ -79,7 +79,7 @@ collections:
                 summary: "{{fields.text}}"
                 field: { name: "text", label: "Paragraphe", widget: "markdown" }
               - { name: "aside_label", label: "Étiquette du lien externe", hint: "Texte du ruban à droite", widget: "string" }
-              - { name: "aside_text", label: "Texte du lien externe", widget: "text" }
+              - { name: "aside_text", label: "Texte du lien externe", hint: "Vous pouvez mettre du gras/italique grâce aux boutons de mise en forme.", widget: "markdown" }
               - { name: "aside_link_text", label: "Texte du bouton", widget: "string" }
               - { name: "aside_link_url", label: "URL du lien", widget: "string" }
               - { name: "pull_quote", label: "Citation forte", hint: "La phrase mise en avant en bas à droite", widget: "markdown" }
