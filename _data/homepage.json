@@ -8,7 +8,7 @@
     "title": "CAUSE TOUJOURS",
     "title_bang": "!",
     "subtitle": "L'info de Montpellier qui s'affiche en grand",
-    "baseline": "Papier. Bimestriel. Indépendant des milliardaires et des pouvoirs locaux. 100% bénévole. Montpellier.",
+    "baseline": "Papier & bimestriel, nous sommes un média indépendant des milliardaires et des pouvoirs en place à Montpellier et autour.",
     "cta_primary_text": "SOUTENIR / S'ABONNER →",
     "cta_primary_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
     "cta_secondary_text": "Voir le dernier numéro",
@@ -22,7 +22,7 @@
     "dateline_date": "Septembre-octobre 2026",
     "dateline_num": "N°001",
     "kraft_bar": [
-      "TIRAGE LIMITÉ",
+      "MEDIA PAPIER",
       "100% BÉNÉVOLE",
       "SANS PUB",
       "SANS MILLIARDAIRE"
@@ -35,17 +35,18 @@
     "section_title_1": "POURQUOI",
     "section_title_2": "UN MÉDIA ?",
     "section_tag": "MINI-MANIFESTE",
-    "dropcap": "La presse locale est morte. <em>Midi Libre</em> appartient à des milliardaires, la com' institutionnelle noie l'information sous les communiqués. Il manque une voix libre, indépendante, qui ne rend de comptes qu'à ses lecteurs.",
+    "dropcap": "**Alors que le presse locale se prétend souvent neutre, elle ne l’est pas.** Par le choix des sujets et de l’angle avec lequel ils sont traités, la presse locale a un pouvoir important. A _Cause Toujours !_ nous prenons le contre-pied des récits dominants, pour enquêter, informer réellement et soutenir les luttes locales.",
     "paragraphs": [
-      "Nous avons choisi le <strong>papier bimestriel</strong> contre l'infobésité et le flux continu d'écrans. Un objet qu'on garde, qu'on relit, qu'on prête. Pas une notification qu'on oublie.",
-      "<strong>100 % bénévole et engagé.</strong> Personne ne prend de salaire. Chaque euro finance le prochain numéro. Pas d'actionnaires, pas de subventions conditionnelles, pas de pub déguisée.",
-      "<em>Cause Toujours !</em> est un média ancré à Montpellier — culture, luttes, ville, gens — sans filtre et sans peur."
+      "**Un format papier original qui paraît une fois tous les deux mois.** Un rythme qui laisse le temps de traiter un thème sur le fond et d'informer sur la vie et les luttes à Montpellier. Le contraire de l’info continue, du flux permanent. Le choix de l’analyse plutôt que de la polémique éphémère et du flot de commentaires superficiels.",
+      "**_Cause Toujours !_ est indépendant des puissances financières,** sans aucun actionnaire et sans publicité. 100% bénévole, il dépend du soutien de ses lecteurs et lectrices pour fonctionner.",
+      "**_Cause Toujours !_ est un journal, qui laisse la place à l’art, à l’illustration ou encore au dessin de presse**. Chaque numéro inclut un grand poster central inédit, réalisé par une ou un artiste.",
+      "**_Cause Toujours ! est un média ancré à Montpellier tout en étant lié aux autres territoires._**"
     ],
-    "aside_label": "MANIFESTE LONG →",
-    "aside_text": "La version complète, avec les références et les sources.",
-    "aside_link_text": "Ouvrir le document →",
+    "aside_label": "Notre raison d'être",
+    "aside_text": "En savoir plus sur la raison d'être de Cause Toujours !",
+    "aside_link_text": "LIRE LE MANIFESTE  →",
     "aside_link_url": "https://docs.google.com/document/d/1g8uZ63e-0J505eGIR2bSKz2MnbbF0Yi_x0nSkj6nSz4/edit",
-    "pull_quote": "« Un objet qu'on garde,<br>qu'on relit, qu'on prête.<br>Pas une notification<br>qu'on oublie. »"
+    "pull_quote": "**« Un objet qu'on garde, qu'on relit, qu'on prête. Pas une notification qu'on oublie. »**"
   },
   "soutenir": {
     "section_num": "02",
@@ -56,8 +57,8 @@
       {
         "tape": "GALÈRE",
         "price": "24€",
-        "price_unit": "/an · 6 n° · 2€/mois",
-        "desc": "Le minimum vital. Tu reçois les 6 numéros de l'année chez toi.",
+        "price_unit": "/an · 6 n° (soit 2€/mois)",
+        "desc": "Le petit prix, pour qu'on paye l'imprimeur et les artistes du poster central. Tu reçois les 6 numéros de l'année chez toi, distribués par des bénévoles.",
         "button_text": "S'ABONNER →",
         "button_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
         "highlight": false,
@@ -66,8 +67,8 @@
       {
         "tape": "★ RÉFÉRENCE",
         "price": "60€",
-        "price_unit": "/an · 6 n° · 5€/mois",
-        "desc": "L'abonnement standard. 6 numéros + la marge pour imprimer plus.",
+        "price_unit": "/an · 6 n° (soit 5€/mois)",
+        "desc": "L'abonnement standard. Finance l’impression 6 numéros de l'année, et rémunère les artistes. Permet aussi d'imprimer et distribuer plus de numéros, à prix libre pour celles et ceux qui n'ont pas les moyens.",
         "button_text": "S'ABONNER →",
         "button_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
         "highlight": true,
@@ -76,8 +77,8 @@
       {
         "tape": "SOUTIEN",
         "price": "96€",
-        "price_unit": "/an · 6 n° · 8€/mois",
-        "desc": "8€ le couvre le coût brut d'impression d'un numéro. Tu finances directement le papier.",
+        "price_unit": "/an · 6 n° (soit 8€/mois)",
+        "desc": "Finance le coût d'impression d'un numéro et permet de mieux rémunérer l'artiste du poster. Nous permet aussi de distribuer plein de numéros à prix libre pour une diffusion encore plus large !",
         "button_text": "S'ABONNER →",
         "button_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
         "highlight": false,
@@ -87,7 +88,7 @@
         "tape": "MÉCÈNE",
         "price": "240€",
         "price_unit": "/an · 6 n° · 20€/mois",
-        "desc": "Le maximum. Permet de rémunérer les artistes locaux et d'envisager des emplois.",
+        "desc": "Un soutien fort qui nous permet de payer l'impression, l'artiste et de distribuer des numéros à prix libre. Nous permet aussi d'envisager du temps salarié sur ce média et des événements.",
         "button_text": "S'ABONNER →",
         "button_link": "https://cause-commune-montpellier.s2.yapla.com/fr/campaign-16440/donate/crowfunding-causetoujours/16440",
         "highlight": false,
@@ -97,25 +98,25 @@
     "transparency_title": "OÙ VA VOTRE ARGENT ?",
     "transparency_bars": [
       {
-        "pct": "55%",
-        "label": "Impression papier"
+        "pct": "60%",
+        "label": "Imprimeur local"
       },
       {
-        "pct": "20%",
-        "label": "Artistes locaux (poster A2)"
+        "pct": "25%",
+        "label": "Artistes (poster A2)"
       },
       {
-        "pct": "15%",
-        "label": "Distribution & logistique"
+        "pct": "5%",
+        "label": "Distribution & logistique (matériel de distribution)"
       },
       {
         "pct": "10%",
-        "label": "Fonctionnement"
+        "label": "Fonctionnement (outils informatiques)"
       }
     ],
-    "transparency_note": "<strong>0 € dans la poche d'actionnaires.</strong> Tout est réinvesti dans le prochain numéro.",
+    "transparency_note": "<strong>0 € dans la poche d'actionnaires (il n'y en a pas!).</strong> Toutes l'argent collecté est utiliser pour produire et faire connaitre le média Cause Toujours!",
     "adresse_label": "📬 ABONNÉS PAPIER",
-    "adresse_text": "Pour recevoir les numéros à domicile, inscrivez-vous via Yapla : votre adresse postale sera demandée."
+    "adresse_text": "Pour recevoir les numéros à domicile, inscrivez-vous via le formulaire Yapla : votre adresse postale sera demandée pour la livraison bénévole"
   },
   "numero": {
     "section_num": "03",
@@ -139,7 +140,7 @@
     "poster_image_alt": "Poster A2 du N°001 par STBF — Cause Toujours !",
     "poster_caption": "Chaque numéro inclut un poster A2 signé par un·e artiste engagé·e.",
     "crossword_title": "MOTS CROISÉS · N°001",
-    "crossword_intro": "Tu as joué dans le #1 ? Vérifie tes réponses.",
+    "crossword_intro": "Tu as joué dans le dernier numéro ? Vérifie tes réponses.",
     "crossword_image": "mots-croises-n001.jpeg",
     "crossword_image_alt": "Solution des mots croisés du N°001 — Cause Toujours !",
     "crossword_reveal_text": "Cliquez pour révéler la réponse",
@@ -157,32 +158,32 @@
         "num": "01",
         "name": "Le QG",
         "address": "2 Quai des Tanneurs, 34090 Montpellier",
-        "lat": 43.6159,
-        "lng": 3.8749,
+        "lat": 43,
+        "lng": 3,
         "color": "#C8302A"
       },
       {
         "num": "02",
         "name": "Biocoop Garrigues",
         "address": "25 av. des Marris, Montpellier",
-        "lat": 43.6085,
-        "lng": 3.8729,
+        "lat": 43,
+        "lng": 3,
         "color": "#7BB89C"
       },
       {
         "num": "03",
         "name": "Théâtre de la Plume",
         "address": "6 Rue Guillaume Pellicier, 34070 Montpellier",
-        "lat": 43.6086,
-        "lng": 3.867,
+        "lat": 43,
+        "lng": 3,
         "color": "#D4A537"
       },
       {
         "num": "04",
         "name": "Le Grain des Mots",
         "address": "2 cours Gambetta, Montpellier",
-        "lat": 43.6055,
-        "lng": 3.8745,
+        "lat": 43,
+        "lng": 3,
         "color": "#5B8BA0"
       }
     ]
