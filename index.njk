@@ -146,7 +146,7 @@
           <span>{{ homepage.manifeste.aside_label }}</span>
         </div>
         <div class="aside-body">
-          <p>{{ homepage.manifeste.aside_text }}</p>
+          <p>{{ homepage.manifeste.aside_text | markdownify }}</p>
           <a href="{{ homepage.manifeste.aside_link_url }}" target="_blank" class="link-block">{{ homepage.manifeste.aside_link_text }}</a>
         </div>
         <div class="manifeste-pull">
