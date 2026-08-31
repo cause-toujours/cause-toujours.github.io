@@ -46,13 +46,13 @@
     "aside_text": "En savoir plus sur la raison d'être de Cause Toujours !",
     "aside_link_text": "LIRE LE MANIFESTE  →",
     "aside_link_url": "https://docs.google.com/document/d/1g8uZ63e-0J505eGIR2bSKz2MnbbF0Yi_x0nSkj6nSz4/edit",
-    "pull_quote": "**« Un objet qu'on garde, qu'on relit, qu'on prête. Pas une notification qu'on oublie. »**"
+    "pull_quote": "**Un objet qu'on garde, qu'on relit, qu'on prête. Pas une notification qu'on oublie.**"
   },
   "soutenir": {
     "section_num": "02",
     "section_title_1": "SOUTENIR",
     "section_title_2": "CAUSE TOUJOURS !",
-    "section_tag": "ABONNEMENTS & DONS",
+    "section_tag": "ABONNEMENTS",
     "formules": [
       {
         "tape": "GALÈRE",
@@ -146,7 +146,7 @@
     "crossword_reveal_text": "Cliquez pour révéler la réponse",
     "ig_tape_label": "DERNIER POST · INSTAGRAM",
     "ig_override_post_id": "",
-    "ig_intro": "On y poste les coulisses, les extraits et les annonces."
+    "ig_intro": "Chaque mois, retrouvez un horoscope thématique !"
   },
   "trouver": {
     "section_num": "04",
@@ -194,21 +194,21 @@
     "section_title_2": "SOMMES-NOUS ?",
     "section_tag": "L'ÉQUIPE",
     "paragraphs": [
-      "<em>Cause Toujours !</em> est un collectif de bénévoles montpelliérains qui croit qu'une ville mérite un média qui lui ressemble : libre, impertinent, culturel, ancré.",
-      "Pas un relais de com'. Pas un journal de pub. Nous écrivons, imprimons, distribuons nous-mêmes. <strong>Personne ne nous dit quoi dire.</strong>",
-      "<em>Cause Toujours !</em> est porté par <strong>Cause Commune</strong>, un mouvement citoyen et démocratique engagé à Montpellier."
+      "<strong> <em>Cause Toujours !</em>  est un média participatif, animé par une quinzaine de rédacteur·rices bénévoles, militant·es ou sympathisant·es de Cause Commune, mouvement municipaliste à Montpellier.  </strong>",
+      "<strong>Nous sommes convaincu·es que notre ville mérite un média qui lui ressemble </strong> : libre, impertinent, culturel et ancré. Nous tendons la plume à différent·es acteurs et actrices de la société civile, tout comme nous le faisons avec nos deux élues locales Alenka Doulain et Julia Mignacca.",
+      "> <em> NOUS NE SOMMES PAS NEUTRES. MAIS MIDI LIBRE NON PLUS </em>"
     ],
     "social_title": "SUIVEZ-NOUS",
     "social_text": "Sur Instagram, via le compte de notre grande sœur :",
     "social_link_text": "@CAUSECOMMUNE.MTP →",
     "social_link_url": "https://www.instagram.com/causecommune.mtp/",
     "engagement_title": "PRENDRE LA PLUME",
-    "engagement_text": "Vous écrivez, dessinez, photographiez ? Contribuez à un prochain numéro.",
+    "engagement_text": "Vous écrivez, dessinez, photographiez ? Et si vous contribuiez à un prochain numéro.",
     "engagement_button_text": "ÉCRIRE À LA RÉDAC →",
     "engagement_email": "redaction@montpelliercausecommune.org",
-    "cc_label": "UN PROJET DE LA FAMILLE",
+    "cc_label": "UN PROJET DE",
     "cc_name": "CAUSE COMMUNE",
-    "cc_detail": "Parti politique · Montpellier"
+    "cc_detail": "Mouvement municipaliste · Montpellier"
   },
   "footer": {
     "logo": "CAUSE TOUJOURS",
