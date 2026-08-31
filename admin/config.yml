@@ -108,7 +108,7 @@ collections:
                   - { name: "button_text", label: "Texte du bouton", widget: "string" }
                   - { name: "button_link", label: "Lien du bouton", hint: "URL Yapla ou # pour plus tard", widget: "string" }
                   - { name: "highlight", label: "Mettre en avant", hint: "Cochez pour la carte 'MEILLEUR CHOIX' (fond coloré)", widget: "boolean", default: false }
-                  - { name: "flag", label: "Drapeau", hint: "Texte du drapeau (ex: MEILLEUR CHOIX). Laisser vide si pas de drapeau.", widget: "string", default: "" }
+                  - { name: "flag", label: "Drapeau", hint: "Texte du drapeau (ex: MEILLEUR CHOIX). Laisser vide si pas de drapeau.", widget: "string", default: "", required: false }
               - { name: "transparency_title", label: "Titre transparence", hint: "Titre de la section 'Où va votre argent'", widget: "string" }
               - name: "transparency_bars"
                 label: "Répartition des dépenses"
