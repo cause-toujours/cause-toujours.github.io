@@ -171,19 +171,11 @@ collections:
               - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
               - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
               - { name: "section_tag", label: "Étiquette", widget: "string" }
-              - name: "locations"
-                label: "Points de vente"
-                hint: "Ajoutez, supprimez ou réordonnez les lieux de vente"
-                widget: "list"
-                minimize_collapsed: true
-                summary: "{{fields.name}}"
-                fields:
-                  - { name: "num", label: "Numéro", widget: "string" }
-                  - { name: "name", label: "Nom du lieu", widget: "string" }
-                  - { name: "address", label: "Adresse", widget: "string" }
-                  - { name: "lat", label: "Latitude", hint: "Coordonnée pour la carte (ex: 43.6159)", widget: "number", value_type: "float", step: 0.0001 }
-                  - { name: "lng", label: "Longitude", hint: "Coordonnée pour la carte (ex: 3.8749)", widget: "number", value_type: "float", step: 0.0001 }
-                  - { name: "color", label: "Couleur du marqueur", hint: "Code couleur hex (ex: #C8302A)", widget: "string" }
+              - { name: "coming_soon_text", label: "Message principal", hint: "Texte annonçant l'arrivée prochaine du journal en points de vente", widget: "string" }
+              - { name: "contact_title", label: "Titre d'appel", hint: "Première phrase d'invitation à devenir point de vente", widget: "string" }
+              - { name: "contact_text", label: "Texte d'appel", hint: "Deuxième phrase d'invitation", widget: "string" }
+              - { name: "contact_email", label: "Email de contact", hint: "Adresse email où écrire pour devenir point de vente", widget: "string" }
+              - { name: "contact_button_text", label: "Texte du bouton", widget: "string" }
 
           # --- QUI SOMMES-NOUS ---
           - name: "qui"
@@ -229,3 +221,21 @@ collections:
                 hint: "Textes séparés par des points dans le pied de page"
                 widget: "list"
                 minimize_collapsed: true
+
+      # --- MANIFESTE (page dédiée) ---
+      - file: "_data/manifeste.json"
+        name: "manifeste"
+        label: "Le Manifeste"
+        format: "json"
+        fields:
+          - { name: "titre", label: "Titre principal", widget: "string" }
+          - { name: "sous_titre", label: "Sous-titre", widget: "string" }
+          - name: "sections"
+            label: "Sections"
+            widget: "list"
+            hint: "Chaque section = un titre + son contenu. Ajoutez, supprimez ou réordonnez."
+            summary: "{{fields.titre}}"
+            minimize_collapsed: true
+            fields:
+              - { name: "titre", label: "Titre de la section", widget: "string" }
+              - { name: "contenu", label: "Contenu", hint: "Vous pouvez mettre du gras/italique grâce aux boutons de mise en forme.", widget: "markdown" }

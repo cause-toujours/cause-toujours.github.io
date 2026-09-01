@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ homepage.meta.title }}</title>
   <meta name="description" content="{{ homepage.meta.description }}">
+  <link rel="canonical" href="https://cause-toujours.org/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/instagram-feed.css">
   <!-- <link rel="stylesheet" href="css/crossword.css"> -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
   <!-- === BANDEAU FAMILLE CSS === -->
   <style>
@@ -137,7 +137,7 @@
       <div class="manifeste-main">
         <p class="dropcap">{{ homepage.manifeste.dropcap | markdownify }}</p>
         {% for para in homepage.manifeste.paragraphs %}
-        <p>{{ para | markdownify }}</p>
+        <p>{{ para.text | markdownify }}</p>
         {% endfor %}
       </div>
 
@@ -233,7 +233,7 @@
       <h3 class="block-title">{{ homepage.numero.mini_edito_label }}</h3>
       <p class="dropcap">{{ homepage.numero.mini_edito_intro | markdownify }}</p>
       {% for para in homepage.numero.mini_edito_paragraphs %}
-      <p>{{ para | markdownify }}</p>
+      <p>{{ para.text | markdownify }}</p>
       {% endfor %}
       <p class="mini-edito-outro">{{ homepage.numero.mini_edito_outro }}</p>
     </div>
@@ -295,21 +295,12 @@
       <span class="sec-tag">{{ homepage.trouver.section_tag }}</span>
     </div>
 
-    <div class="trouver-grid">
-      <div class="trouver-list">
-        {% for loc in homepage.trouver.locations %}
-        <div class="trouver-item">
-          <span class="trouver-num" style="background:{{ loc.color }}">{{ loc.num }}</span>
-          <div>
-            <strong>{{ loc.name }}</strong>
-            <p>{{ loc.address }}</p>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-
-      <div class="trouver-map">
-        <div id="map"></div>
+    <div class="trouver-message">
+      <p class="trouver-coming">{{ homepage.trouver.coming_soon_text }}</p>
+      <div class="trouver-contact">
+        <p><strong>{{ homepage.trouver.contact_title }}</strong></p>
+        <p>{{ homepage.trouver.contact_text }}</p>
+        <a href="mailto:{{ homepage.trouver.contact_email }}?subject=Distribution%20Cause%20Toujours" class="btn-outline">{{ homepage.trouver.contact_button_text }}</a>
       </div>
     </div>
   </section>
@@ -325,7 +316,7 @@
     <div class="qui-grid">
       <div class="qui-text">
         {% for para in homepage.qui.paragraphs %}
-        <p>{{ para | markdownify }}</p>
+        <p>{{ para.text | markdownify }}</p>
         {% endfor %}
       </div>
 
@@ -377,29 +368,6 @@
   <!-- crossword.js — commenté pour le N°001, réactivé pour les prochains numéros -->
   <!-- <script src="js/crossword.js" defer></script> -->
 
-  <!-- === LEAFLET MAP === -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    const map = L.map('map', { scrollWheelZoom: false });
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; OpenStreetMap'
-    }).addTo(map);
-    const bounds = [];
-    {% for loc in homepage.trouver.locations %}
-    bounds.push([{{ loc.lat }}, {{ loc.lng }}]);
-    L.marker([{{ loc.lat }}, {{ loc.lng }}], {
-      icon: L.divIcon({
-        className: 'ct-marker',
-        html: '<div style="background:{{ loc.color }}" class="ct-marker-inner">{{ loc.num }}</div>',
-        iconSize: [36, 36],
-        iconAnchor: [18, 18]
-      })
-    }).addTo(map).bindPopup('<strong>{{ loc.name }}</strong><br>{{ loc.address }}');
-    {% endfor %}
-    map.fitBounds(bounds, { padding: [30, 30], maxZoom: 16 });
-    setTimeout(() => map.invalidateSize(), 100);
-  </script>
 
 </body>
 </html>

@@ -26,6 +26,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("poster-a2.jpg");
   eleventyConfig.addPassthroughCopy("poster-a2-n001.png");
   eleventyConfig.addPassthroughCopy("logo-cc.png");
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   return {
     templateFormats: ["njk", "md"],

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cause-toujours.org/sitemap.xml

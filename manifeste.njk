@@ -9,6 +9,7 @@ permalink: /manifeste/
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Le manifeste — Cause Toujours !</title>
   <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://cause-toujours.org/manifeste/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -24,12 +25,9 @@ permalink: /manifeste/
     .mf-header .mf-logo { font-style: italic; font-weight: 700; text-transform: uppercase; font-size: 1.15rem; }
     .mf-header .mf-back { font-size: 0.75rem; text-transform: uppercase; opacity: 0.85; }
     .mf-header .mf-back:hover { color: var(--rouge-light); }
-    .mf-wrap { max-width: 720px; margin: 0 auto; padding: 72px 24px 96px; }
+    .mf-wrapper { max-width: 720px; margin: 0 auto; padding: 72px 24px 96px; }
 
-    .mf-hero { margin-bottom: 56px; text-align: center; }
-    .mf-kicker { font-family: var(--font-sec); font-weight: 500; font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--rouge); margin-bottom: 16px; }
-    .mf-title { font-family: var(--font-narrow); font-weight: 700; font-style: italic; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 0.95; text-transform: uppercase; letter-spacing: -1px; }
-    .mf-sub { font-family: var(--font-sec); font-style: italic; font-size: 1.05rem; color: var(--noir); margin-top: 18px; }
+    .mf-sub { font-family: var(--font-sec); font-style: italic; font-size: 1.05rem; color: var(--noir); margin-top: 14px; }
 
     .mf-section { margin-bottom: 64px; }
     .mf-section h2 {
@@ -56,11 +54,14 @@ permalink: /manifeste/
   </header>
 
   <section class="section">
-    <div class="mf-wrap">
-      <div class="mf-hero">
-        <div class="mf-kicker">Le Manifeste</div>
-        <h1 class="mf-title">{{ manifeste.titre }}</h1>
-        <p class="mf-sub">{{ manifeste.sous_titre }}</p>
+    <div class="mf-wrapper">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <div>
+          <h1 class="sec-title">{{ manifeste.titre }}</h1>
+          <p class="mf-sub">{{ manifeste.sous_titre }}</p>
+        </div>
+        <span class="sec-tag">MANIFESTE</span>
       </div>
 
       {% for section in manifeste.sections %}
