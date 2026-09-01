@@ -181,8 +181,8 @@ collections:
                   - { name: "num", label: "Numéro", widget: "string" }
                   - { name: "name", label: "Nom du lieu", widget: "string" }
                   - { name: "address", label: "Adresse", widget: "string" }
-                  - { name: "lat", label: "Latitude", hint: "Coordonnée pour la carte (ex: 43.6159)", widget: "number", value_type: "float", step: "0.0001" }
-                  - { name: "lng", label: "Longitude", hint: "Coordonnée pour la carte (ex: 3.8749)", widget: "number", value_type: "float", step: "0.0001" }
+                  - { name: "lat", label: "Latitude", hint: "Coordonnée pour la carte (ex: 43.6159)", widget: "number", value_type: "float", step: 0.0001 }
+                  - { name: "lng", label: "Longitude", hint: "Coordonnée pour la carte (ex: 3.8749)", widget: "number", value_type: "float", step: 0.0001 }
                   - { name: "color", label: "Couleur du marqueur", hint: "Code couleur hex (ex: #C8302A)", widget: "string" }
 
           # --- QUI SOMMES-NOUS ---
