@@ -6,6 +6,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("markdownify", (content) =>
     new SafeString(md.renderInline(content || ""))
   );
+  eleventyConfig.addFilter("markdownBlock", (content) =>
+    new SafeString(md.render(content || ""))
+  );
 
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.addPassthroughCopy("css");

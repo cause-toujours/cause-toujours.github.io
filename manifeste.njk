@@ -25,11 +25,25 @@ permalink: /manifeste/
     .mf-header .mf-back { font-size: 0.75rem; text-transform: uppercase; opacity: 0.85; }
     .mf-header .mf-back:hover { color: var(--rouge-light); }
     .mf-wrap { max-width: 720px; margin: 0 auto; padding: 72px 24px 96px; }
-    .mf-pull {
-      background: var(--vert); color: var(--noir); padding: 24px;
-      border: var(--border-2); box-shadow: var(--shadow); transform: rotate(1deg);
-      font-family: var(--font-sec); font-style: italic; font-size: 1.25rem; margin-top: 48px;
+
+    .mf-hero { margin-bottom: 56px; text-align: center; }
+    .mf-kicker { font-family: var(--font-sec); font-weight: 500; font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--rouge); margin-bottom: 16px; }
+    .mf-title { font-family: var(--font-narrow); font-weight: 700; font-style: italic; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 0.95; text-transform: uppercase; letter-spacing: -1px; }
+    .mf-sub { font-family: var(--font-sec); font-style: italic; font-size: 1.05rem; color: var(--noir); margin-top: 18px; }
+
+    .mf-section { margin-bottom: 64px; }
+    .mf-section h2 {
+      font-family: var(--font-narrow); font-weight: 700; font-style: italic;
+      font-size: clamp(1.5rem, 3.6vw, 2.1rem); line-height: 1.05;
+      text-transform: uppercase; letter-spacing: -1px;
+      border-left: 6px solid var(--rouge); padding-left: 18px; margin-bottom: 24px;
     }
+    .mf-section p { font-family: var(--font-body); font-size: 1.13rem; line-height: 1.65; margin-bottom: 20px; }
+    .mf-section strong { color: var(--rouge); font-weight: 600; }
+    .mf-section em { font-style: italic; }
+
+    .mf-end { margin-top: 64px; text-align: center; }
+    .mf-end .mf-sign { font-family: var(--font-narrow); font-style: italic; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
     .mf-footer { border-top: var(--border-4); padding: 32px 24px; text-align: center; }
     .mf-footer a { font-family: var(--font-sec); text-transform: uppercase; font-weight: 500; color: var(--noir); border-bottom: 2px solid var(--noir); padding-bottom: 2px; text-decoration: none; }
     .mf-footer a:hover { color: var(--rouge); border-color: var(--rouge); }
@@ -43,20 +57,18 @@ permalink: /manifeste/
 
   <section class="section">
     <div class="mf-wrap">
-      <div class="sec-head">
-        <span class="sec-num">{{ homepage.manifeste.section_num }}</span>
-        <h1 class="sec-title">{{ homepage.manifeste.section_title_1 }}<br>{{ homepage.manifeste.section_title_2 | safe }}</h1>
-        <span class="sec-tag">{{ homepage.manifeste.section_tag }}</span>
+      <div class="mf-hero">
+        <div class="mf-kicker">Le Manifeste</div>
+        <h1 class="mf-title">{{ manifeste.titre }}</h1>
+        <p class="mf-sub">{{ manifeste.sous_titre }}</p>
       </div>
 
-      <div class="manifeste-main">
-        <p class="dropcap">{{ homepage.manifeste.dropcap | markdownify }}</p>
-        {% for para in homepage.manifeste.paragraphs %}
-        <p>{{ para | markdownify }}</p>
-        {% endfor %}
+      {% for section in manifeste.sections %}
+      <div class="mf-section">
+        <h2>{{ section.titre }}</h2>
+        <div>{{ section.contenu | markdownBlock }}</div>
       </div>
-
-      <div class="mf-pull">{{ homepage.manifeste.pull_quote }}</div>
+      {% endfor %}
     </div>
   </section>
 
