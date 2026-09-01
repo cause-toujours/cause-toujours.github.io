@@ -1,0 +1,67 @@
+---
+permalink: /manifeste/
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le manifeste — Cause Toujours !</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .mf-header {
+      background: var(--noir); color: var(--cream); padding: 18px 24px;
+      font-family: var(--font-narrow); display: flex; align-items: center; justify-content: space-between;
+      border-bottom: var(--border-4); border-color: var(--rouge);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .mf-header a { color: var(--cream); text-decoration: none; letter-spacing: 1px; }
+    .mf-header .mf-logo { font-style: italic; font-weight: 700; text-transform: uppercase; font-size: 1.15rem; }
+    .mf-header .mf-back { font-size: 0.75rem; text-transform: uppercase; opacity: 0.85; }
+    .mf-header .mf-back:hover { color: var(--rouge-light); }
+    .mf-wrap { max-width: 720px; margin: 0 auto; padding: 72px 24px 96px; }
+    .mf-pull {
+      background: var(--vert); color: var(--noir); padding: 24px;
+      border: var(--border-2); box-shadow: var(--shadow); transform: rotate(1deg);
+      font-family: var(--font-sec); font-style: italic; font-size: 1.25rem; margin-top: 48px;
+    }
+    .mf-footer { border-top: var(--border-4); padding: 32px 24px; text-align: center; }
+    .mf-footer a { font-family: var(--font-sec); text-transform: uppercase; font-weight: 500; color: var(--noir); border-bottom: 2px solid var(--noir); padding-bottom: 2px; text-decoration: none; }
+    .mf-footer a:hover { color: var(--rouge); border-color: var(--rouge); }
+  </style>
+</head>
+<body>
+  <header class="mf-header">
+    <a href="/" class="mf-logo">Cause Toujours !</a>
+    <a href="/" class="mf-back">← Retour à l'accueil</a>
+  </header>
+
+  <section class="section">
+    <div class="mf-wrap">
+      <div class="sec-head">
+        <span class="sec-num">{{ homepage.manifeste.section_num }}</span>
+        <h1 class="sec-title">{{ homepage.manifeste.section_title_1 }}<br>{{ homepage.manifeste.section_title_2 | safe }}</h1>
+        <span class="sec-tag">{{ homepage.manifeste.section_tag }}</span>
+      </div>
+
+      <div class="manifeste-main">
+        <p class="dropcap">{{ homepage.manifeste.dropcap | markdownify }}</p>
+        {% for para in homepage.manifeste.paragraphs %}
+        <p>{{ para | markdownify }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="mf-pull">{{ homepage.manifeste.pull_quote }}</div>
+    </div>
+  </section>
+
+  <footer class="mf-footer">
+    <a href="/">← Retour sur le site</a>
+  </footer>
+</body>
+</html>
