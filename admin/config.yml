@@ -77,7 +77,8 @@ collections:
                 widget: "list"
                 minimize_collapsed: true
                 summary: "{{fields.text}}"
-                field: { name: "text", label: "Paragraphe", widget: "string" }
+                fields:
+                  - { name: "text", label: "Paragraphe", widget: "string" }
               - { name: "aside_label", label: "Étiquette du lien externe", hint: "Texte du ruban à droite", widget: "string" }
               - { name: "aside_text", label: "Texte du lien externe", hint: "Vous pouvez mettre du HTML (<em>, <strong>).", widget: "string" }
               - { name: "aside_link_text", label: "Texte du bouton", widget: "string" }
@@ -144,7 +145,8 @@ collections:
                 widget: "list"
                 minimize_collapsed: true
                 summary: "{{fields.text}}"
-                field: { name: "text", label: "Paragraphe", widget: "string" }
+                fields:
+                  - { name: "text", label: "Paragraphe", widget: "string" }
               - { name: "mini_edito_outro", label: "Mini édito — phrase de sortie", hint: "Invitation vers le papier (ex: À découvrir en version longue dans le dernier numéro papier de Cause Toujours !)", widget: "string" }
               - { name: "poster_tape", label: "Affiche — ruban", hint: "Texte en haut de l'affiche poster (ex: POSTER A2 · N°001)", widget: "string" }
               - { name: "poster_artist", label: "Affiche — nom de l'artiste", hint: "Ex: STBF", widget: "string" }
@@ -204,7 +206,8 @@ collections:
                 widget: "list"
                 minimize_collapsed: true
                 summary: "{{fields.text}}"
-                field: { name: "text", label: "Paragraphe", widget: "string" }
+                fields:
+                  - { name: "text", label: "Paragraphe", widget: "string" }
               - { name: "social_title", label: "Titre réseaux sociaux", widget: "string" }
               - { name: "social_text", label: "Texte réseaux sociaux", widget: "markdown" }
               - { name: "social_link_text", label: "Lien réseau — texte", widget: "string" }
