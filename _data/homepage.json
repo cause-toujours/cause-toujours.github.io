@@ -37,10 +37,18 @@
     "section_tag": "MINI-MANIFESTE",
     "dropcap": "<strong>Alors que le presse locale se prétend souvent neutre, elle ne l’est pas. </strong> Par le choix des sujets et de l’angle avec lequel ils sont traités, la presse locale a un pouvoir important. A <em>Cause Toujours !</em> nous ne suivons pas les récits dominants. Nous enquêtons pour informer réellement et soutenir les luttes locales.",
     "paragraphs": [
-      { "text": "<strong> Un format papier original qui paraît une fois tous les deux mois. </strong> Un rythme qui laisse le temps de traiter un thème sur le fond et d'informer sur la vie et les luttes à Montpellier. Le contraire de l'info continue, du flux permanent. Le choix de l'analyse plutôt que de la polémique éphémère et du flot de commentaires superficiels." },
-      { "text": "<strong> <em>Cause Toujours !</em> est indépendant des puissances financières, </strong> sans aucun actionnaire et sans publicité. 100% bénévole, il dépend du soutien de ses lecteurs et lectrices pour fonctionner." },
-      { "text": "<strong> <em>Cause Toujours !</em> est un journal, qui laisse la place à l'art, à l'illustration ou encore au dessin de presse. </strong> Chaque numéro inclut un grand poster central inédit, réalisé par une ou un artiste." },
-      { "text": "<em><strong> Cause Toujours ! est un média ancré à Montpellier tout en étant lié aux autres territoires. </em></strong>" }
+      {
+        "text": "<strong> Un format papier original qui paraît une fois tous les deux mois. </strong> Un rythme qui laisse le temps de traiter un thème sur le fond et d'informer sur la vie et les luttes à Montpellier. Le contraire de l'info continue, du flux permanent. Le choix de l'analyse plutôt que de la polémique éphémère et du flot de commentaires superficiels."
+      },
+      {
+        "text": "<strong> <em>Cause Toujours !</em> est indépendant des puissances financières, </strong> sans aucun actionnaire et sans publicité. 100% bénévole, il dépend du soutien de ses lecteurs et lectrices pour fonctionner."
+      },
+      {
+        "text": "<strong> <em>Cause Toujours !</em> est un journal, qui laisse la place à l'art, à l'illustration ou encore au dessin de presse. </strong> Chaque numéro inclut un grand poster central inédit, réalisé par une ou un artiste."
+      },
+      {
+        "text": "<em><strong> Cause Toujours ! est un média ancré à Montpellier tout en étant lié aux autres territoires. </em></strong>"
+      }
     ],
     "aside_label": "Notre raison d'être",
     "aside_text": "En savoir plus sur la raison d'être de <em>Cause Toujours&nbsp;!</em>",
@@ -129,8 +137,12 @@
     "mini_edito_label": "MINI ÉDITO · N°001",
     "mini_edito_intro": "Et si c'était notre dernier été « normal » ? Canicules, méga-feux, rivières à sec : le futur annoncé par les scientifiques est déjà là. Pendant que la planète brûle, notre démocratie s'étouffe, fragilisée par la concentration des médias et l'affaiblissement de la presse indépendante. Pourtant, des milliers d'associations agissent chaque jour pour protéger le vivant, créer du lien et défendre les plus précaires.",
     "mini_edito_paragraphs": [
-      { "text": "À Montpellier, les moyens manquent, tandis que la communication officielle, elle, ne connaît pas la crise. C'est pour renforcer le tissu associatif et pour une information libre, que naît Cause Toujours : un journal bénévole et indépendant, qui prend le temps d'enquêter, d'expliquer et de relier les combats écologiques, sociaux et démocratiques. Parce qu'une démocratie vivante a besoin de contrepouvoirs et de médias libres. Bonne lecture !" },
-      { "text": "<em>Julia Mignacca</em> — Élue Cause Commune · Les Verts Populaires (Mairie & Métropole)" }
+      {
+        "text": "À Montpellier, les moyens manquent, tandis que la communication officielle, elle, ne connaît pas la crise. C'est pour renforcer le tissu associatif et pour une information libre, que naît Cause Toujours : un journal bénévole et indépendant, qui prend le temps d'enquêter, d'expliquer et de relier les combats écologiques, sociaux et démocratiques. Parce qu'une démocratie vivante a besoin de contrepouvoirs et de médias libres. Bonne lecture !"
+      },
+      {
+        "text": "<em>Julia Mignacca</em> — Élue Cause Commune · Les Verts Populaires (Mairie & Métropole)"
+      }
     ],
     "mini_edito_outro": "À découvrir en version longue dans le dernier numéro papier de Cause Toujours !",
     "poster_tape": "POSTER A2 · N°001",
@@ -165,9 +177,15 @@
     "section_title_2": "SOMMES-NOUS ?",
     "section_tag": "L'ÉQUIPE",
     "paragraphs": [
-      { "text": "<strong> <em>Cause Toujours !</em>  est un média participatif, animé par une quinzaine de rédacteur·rices bénévoles, militant·es ou sympathisant·es de Cause Commune, mouvement municipaliste à Montpellier.  </strong>" },
-      { "text": "<strong>Nous sommes convaincu·es que notre ville mérite un média qui lui ressemble </strong> : libre, impertinent, culturel et ancré. Nous tendons la plume à différent·es acteurs et actrices de la société civile, tout comme nous le faisons avec nos deux élues locales Alenka Doulain et Julia Mignacca." },
-      { "text": "> <em> NOUS NE SOMMES PAS NEUTRES. MAIS MIDI LIBRE NON PLUS </em>" }
+      {
+        "text": "<strong> <em>Cause Toujours !</em>  est un média participatif, animé par une quinzaine de rédacteur·rices bénévoles, militant·es ou sympathisant·es de Cause Commune, mouvement municipaliste à Montpellier.  </strong>"
+      },
+      {
+        "text": "<strong>Nous sommes convaincu·es que notre ville mérite un média qui lui ressemble </strong> : libre, impertinent, culturel et ancré. Nous tendons la plume à différent·es acteurs et actrices de la société civile, tout comme nous le faisons avec nos deux élues locales Alenka Doulain et Julia Mignacca."
+      },
+      {
+        "text": "> <em> NOUS NE SOMMES PAS NEUTRES. MAIS MIDI LIBRE NON PLUS </em>"
+      }
     ],
     "social_title": "SUIVEZ-NOUS",
     "social_text": "Sur Instagram, via le compte de notre grande sœur :",
