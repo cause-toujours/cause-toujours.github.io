@@ -33,7 +33,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/instagram.json data/instagram-pin-options.json data/instagram-pinned.json
+          git add data/instagram.json data/instagram-pin-options.json
+          # le snapshot épinglé n'existe que si un post est forcé via le CMS
+          if [ -f data/instagram-pinned.json ]; then
+            git add data/instagram-pinned.json
+          fi
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
