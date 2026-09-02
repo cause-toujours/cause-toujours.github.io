@@ -70,16 +70,16 @@ collections:
               - { name: "section_title_1", label: "Titre (ligne 1)", widget: "string" }
               - { name: "section_title_2", label: "Titre (ligne 2)", widget: "string" }
               - { name: "section_tag", label: "Étiquette", hint: "Petit texte à côté du titre", widget: "string" }
-              - { name: "dropcap", label: "Paragraphe d'ouverture", hint: "Le premier paragraphe avec la grande lettrine. Vous pouvez utiliser du gras/italique.", widget: "markdown" }
+              - { name: "dropcap", label: "Paragraphe d'ouverture", hint: "Le premier paragraphe avec la grande lettrine. Vous pouvez utiliser du HTML (<strong>, <em>).", widget: "string" }
               - name: "paragraphs"
                 label: "Paragraphes du manifeste"
                 hint: "Ajoutez, supprimez ou réordonnez les paragraphes"
                 widget: "list"
                 minimize_collapsed: true
                 summary: "{{fields.text}}"
-                field: { name: "text", label: "Paragraphe", widget: "markdown" }
+                field: { name: "text", label: "Paragraphe", widget: "string" }
               - { name: "aside_label", label: "Étiquette du lien externe", hint: "Texte du ruban à droite", widget: "string" }
-              - { name: "aside_text", label: "Texte du lien externe", hint: "Vous pouvez mettre du gras/italique grâce aux boutons de mise en forme.", widget: "markdown" }
+              - { name: "aside_text", label: "Texte du lien externe", hint: "Vous pouvez mettre du HTML (<em>, <strong>).", widget: "string" }
               - { name: "aside_link_text", label: "Texte du bouton", widget: "string" }
               - { name: "aside_link_url", label: "URL du lien", widget: "string" }
               - { name: "pull_quote", label: "Citation forte", hint: "La phrase mise en avant en bas à droite", widget: "markdown" }
@@ -119,7 +119,7 @@ collections:
                 fields:
                   - { name: "pct", label: "Pourcentage", widget: "string" }
                   - { name: "label", label: "Libellé", widget: "string" }
-              - { name: "transparency_note", label: "Note de transparence", hint: "Phrase en bas de la section", widget: "markdown" }
+              - { name: "transparency_note", label: "Note de transparence", hint: "Phrase en bas de la section. Vous pouvez utiliser du HTML (<strong>, <em>).", widget: "string" }
               - { name: "adresse_label", label: "Étiquette adresse", widget: "string" }
               - { name: "adresse_text", label: "Texte adresse", hint: "Info sur la collecte d'adresse postale", widget: "text" }
 
@@ -144,7 +144,7 @@ collections:
                 widget: "list"
                 minimize_collapsed: true
                 summary: "{{fields.text}}"
-                field: { name: "text", label: "Paragraphe", widget: "markdown" }
+                field: { name: "text", label: "Paragraphe", widget: "string" }
               - { name: "mini_edito_outro", label: "Mini édito — phrase de sortie", hint: "Invitation vers le papier (ex: À découvrir en version longue dans le dernier numéro papier de Cause Toujours !)", widget: "string" }
               - { name: "poster_tape", label: "Affiche — ruban", hint: "Texte en haut de l'affiche poster (ex: POSTER A2 · N°001)", widget: "string" }
               - { name: "poster_artist", label: "Affiche — nom de l'artiste", hint: "Ex: STBF", widget: "string" }
@@ -204,7 +204,7 @@ collections:
                 widget: "list"
                 minimize_collapsed: true
                 summary: "{{fields.text}}"
-                field: { name: "text", label: "Paragraphe", widget: "markdown" }
+                field: { name: "text", label: "Paragraphe", widget: "string" }
               - { name: "social_title", label: "Titre réseaux sociaux", widget: "string" }
               - { name: "social_text", label: "Texte réseaux sociaux", widget: "markdown" }
               - { name: "social_link_text", label: "Lien réseau — texte", widget: "string" }
