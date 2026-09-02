@@ -262,7 +262,7 @@ collections:
       # réécrit à chaque synchronisation du flux.
       - file: "data/instagram-pin-options.json"
         name: "instagram"
-        label: "Posts Instagram (auto)"
+        label: "Posts Instagram (auto) — ne pas toucher"
         format: "json"
         fields:
           - { name: "updatedAt", label: "Date de sync", widget: "hidden", required: false }
