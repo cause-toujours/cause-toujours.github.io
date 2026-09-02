@@ -167,9 +167,9 @@ collections:
                 widget: "relation"
                 collection: "homepage"
                 file: "instagram"
-                value_field: "posts.*.id"
-                search_fields: ["posts.*.caption"]
-                display_fields: ["posts.*.caption"]
+                value_field: "{{posts.*.id}}"
+                search_fields: ["{{posts.*.caption}}"]
+                display_fields: ["{{posts.*.caption}}"]
                 required: false
               - { name: "ig_intro", label: "Texte sous le post Instagram", hint: "Petite phrase sous l'aperçu du dernier post", widget: "text" }
 
