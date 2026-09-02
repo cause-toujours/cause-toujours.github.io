@@ -33,20 +33,37 @@ async function loadInstagramFeed() {
   }
 
   try {
-    const res = await fetch("/data/instagram.json", { cache: "no-store" });
-    if (!res.ok) throw new Error(`Réponse HTTP ${res.status}`);
+    // Override : si un post est épinglé via le CMS, on lit d'abord le snapshot
+    // durable (data/instagram-pinned.json, régénéré à chaque sync) — il reste
+    // affichable même quand le post est sorti de la fenêtre des 12 récents.
+    // En l'absence de snapshot (ou si l'ID ne correspond plus), on retombe sur
+    // le flux classique.
+    const overrideId = clip.getAttribute("data-override-id");
+    let feed = null;
+    if (overrideId) {
+      try {
+        const pinnedRes = await fetch("/data/instagram-pinned.json", { cache: "no-store" });
+        if (pinnedRes.ok) feed = await pinnedRes.json();
+      } catch {
+        feed = null;
+      }
+    }
+    if (!feed) {
+      const res = await fetch("/data/instagram.json", { cache: "no-store" });
+      if (!res.ok) throw new Error(`Réponse HTTP ${res.status}`);
+      feed = await res.json();
+    }
 
-    const { posts } = await res.json();
+    const { posts } = feed;
     if (!posts || posts.length === 0) {
       clip.style.display = "none";
       return;
     }
 
-    // Override : si un ID de post est forcé via le CMS, on le cherche dans le flux
+    // Le post affiché : l'épinglé s'il correspond à l'override, sinon le plus récent
     let post = posts[0];
-    const overrideId = clip.getAttribute("data-override-id");
     if (overrideId) {
-      const found = posts.find((p) => p.id === overrideId);
+      const found = posts.find((p) => String(p.id) === String(overrideId));
       if (found) {
         post = found;
       }

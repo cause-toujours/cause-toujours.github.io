@@ -157,8 +157,20 @@ collections:
               - { name: "crossword_image", label: "Mots croisés — image de la solution", hint: "Nom du fichier image (ex: mots-croises-n001.jpeg). Laisser vide pour masquer l'encart.", widget: "string", required: false }
               - { name: "crossword_image_alt", label: "Mots croisés — description de l'image", hint: "Texte affiché si l'image ne charge pas (accessibilité)", widget: "string", required: false }
               - { name: "crossword_reveal_text", label: "Mots croisés — texte du bouton", hint: "Message affiché sur l'image floutée (ex: Cliquez pour révéler la réponse)", widget: "string", required: false }
-              - { name: "ig_tape_label", label: "Étiquette ruban Instagram", hint: "Texte du ruban kraft au-dessus du dernier post (ex: DERNIER POST · INSTAGRAM)", widget: "string" }
-              - { name: "ig_override_post_id", label: "Forcer un post spécifique (ID)", hint: "Laissez vide pour le dernier post automatique. Pour forcer un post, collez son ID Instagram (ex: 17936214747339836). L'ID s'affiche dans data/instagram.json après chaque sync.", widget: "string", required: false }
+              - name: "ig_tape_label"
+                label: "Étiquette ruban Instagram"
+                hint: "Texte du ruban kraft au-dessus du dernier post (ex: DERNIER POST · INSTAGRAM)"
+                widget: "string"
+              - name: "ig_override_post_id"
+                label: "Post Instagram affiché"
+                hint: "Laissez vide pour le dernier post automatique. Sinon, choisissez parmi les derniers posts du compte (identifiés par leur légende)."
+                widget: "relation"
+                collection: "homepage"
+                file: "instagram"
+                value_field: "posts.*.id"
+                search_fields: ["posts.*.caption"]
+                display_fields: ["posts.*.caption"]
+                required: false
               - { name: "ig_intro", label: "Texte sous le post Instagram", hint: "Petite phrase sous l'aperçu du dernier post", widget: "text" }
 
           # --- OÙ NOUS RETROUVER ---
@@ -239,3 +251,21 @@ collections:
             fields:
               - { name: "titre", label: "Titre de la section", widget: "string" }
               - { name: "contenu", label: "Contenu", hint: "Vous pouvez mettre du gras/italique grâce aux boutons de mise en forme.", widget: "markdown" }
+
+      # --- FLUX INSTAGRAM (options pour la liste déroulante) ---
+      # Fichier généré automatiquement par l'Action GitHub fetch-instagram
+      # (id + légende uniquement). Sert uniquement de source à la liste
+      # déroulante "Post Instagram affiché" (widget relation). Il sera
+      # réécrit à chaque synchronisation du flux.
+      - file: "data/instagram-pin-options.json"
+        name: "instagram"
+        label: "Posts Instagram (auto)"
+        format: "json"
+        fields:
+          - { name: "updatedAt", label: "Date de sync", widget: "hidden", required: false }
+          - name: "posts"
+            label: "Posts"
+            widget: "list"
+            fields:
+              - { name: "id", label: "ID", widget: "hidden", required: false }
+              - { name: "caption", label: "Légende", widget: "string" }
